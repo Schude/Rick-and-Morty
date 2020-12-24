@@ -10,15 +10,21 @@ function rick({chars}){
         <Layout/>
 
 
-        <ul>
+        <div class ="chars-container">
         {chars.results.map(char => (
-        <li key = {char.id}>
-        <Link href ="/chars/[slug]" as = {`chars/${slug(char.name)}-${char.id}`}>
-            <a>{char.name}</a>
-        </Link></li>
+        <div class="char-card">
+        <figure class= "char-img">
+        <img  src = {char.image}></img>
+        </figure>
+        
+        <Link  href ="/chars/[slug]" as = {`chars/${slug(char.name)}-${char.id}`}>
+           <div class= "test"><a class= "char-link">{char.name}</a></div>
+        </Link>
+        
+        </div>
         ))}
-
-        </ul>
+        </div>
+        
     </div>
 }
 

@@ -1,11 +1,71 @@
+
 body{
     font-size: 24px;
     color:peru;
 }
 h1,h2{
     font-size: 40px;
+    text-align: center;
 }
 a{
-    color:rgb(82, 212, 82);
-    margin-right: 10px;
+    color:rgb(255, 255, 255);
+    
+    cursor:pointer;
+}
+
+.chars-container{
+    width: 80%;
+    margin:5rem auto;
+   
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.char-card{
+   
+    margin:5px;
+    max-width: 300px;
+    max-height: 300px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(224, 219, 207);
+    transition: 0.3s ease-in-out;
+}
+
+.char-card:hover .char-link{
+    
+    visibility: visible;
+    opacity: 1;
+    z-index: 1;
+}
+.char-img{
+    margin:0;
+}
+.char-img img{
+    position: relative;
+    
+}
+.test{
+    /*display: block;*/
+     width: 100%;
+     
+}
+.char-link{
+    
+    display: block;
+    margin:0;
+    position: relative;
+    top: -73px;
+    padding: 20px 0;
+    background-color: rgba(65, 78, 74, 0.534);
+    text-align: center;
+    align-items: center;
+    
+    visibility: hidden;
+    opacity: 0; 
+    
+    
 }
