@@ -1,5 +1,5 @@
 import unfetch from 'isomorphic-unfetch'
-import Layout from '../../components/layout'
+import Layout from '../../components/Layout/layout'
 import slug from 'slug'
 function charDetail({char}){
     
@@ -13,7 +13,8 @@ function charDetail({char}){
             <img  src = {char.image}></img>
         </figure>
         <h2>{char.name}</h2>
-        </div>
+        
+    </div>
 }
 
 

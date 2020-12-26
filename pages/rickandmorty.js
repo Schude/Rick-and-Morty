@@ -1,30 +1,33 @@
 import unfetch from 'isomorphic-unfetch'
-import Layout from '../components/layout'
+import Layout from '../components/Layout/layout'
 import Link from 'next/link'
 import slug from 'slug'
+import styles from '../components/components-styles/rickandmort.module.css'
+
+
 function rick({chars}){
     
     
     return <div>
-        <h1>Rick And Morty</h1>
+        <h1 className={styles.greet}>Rick And Morty</h1>
         <Layout/>
 
 
-        <div class ="chars-container">
+         <div className={styles.container}>
         {chars.results.map(char => (
-        <div class="char-card">
-        <figure class= "char-img">
-        <img  src = {char.image}></img>
+        <div className={styles.card}>
+        <figure className={styles.imgBx}>
+        <img className={styles.image} src = {char.image}></img>
         </figure>
         
         <Link  href ="/chars/[slug]" as = {`chars/${slug(char.name)}-${char.id}`}>
-           <div class= "test"><a class= "char-link">{char.name}</a></div>
+           <div className={styles.test}><a className={styles.link}>{char.name}</a></div>
         </Link>
         
         </div>
         ))}
         </div>
-        
+    
     </div>
 }
 

@@ -1,0 +1,54 @@
+.container{
+    width: 80%;
+    margin:5rem auto; 
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.card{
+   
+    margin:5px;
+    max-width: 300px;
+    max-height: 300px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(63, 61, 55, 0.658);
+    
+}
+
+.imgBx{
+    margin:0;
+}
+
+.test{
+     width: 100%;
+     
+}
+.link{
+    
+    display: block;
+    margin:0;
+    max-height: 68px;
+    position: relative;
+    top: -73px;
+    padding: 20px 0;
+    background-color: rgba(33, 36, 35, 0.719);
+    text-align: center;
+    align-items: center;
+    transition: 0.3s ease-in-out;
+    visibility: hidden;
+    opacity: 0; 
+    color:rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.card:hover .link{
+    
+    visibility: visible;
+    opacity: 1;
+    z-index: 1;
+}
