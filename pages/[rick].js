@@ -8,8 +8,13 @@ function otherPage (){
         
     <Layout/>
     <h1>Other Page</h1>
+    <div></div>
     </div>
 
     
 }
 
+export default otherPage;
+
+
+ 

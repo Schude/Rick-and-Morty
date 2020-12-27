@@ -2,6 +2,9 @@ import unfetch from 'isomorphic-unfetch'
 import Layout from '../../components/Layout/layout'
 import slug from 'slug'
 import styles from '../../components/components-styles/char-detail.module.css'
+
+
+
 function charDetail({char}){
     
     
@@ -42,6 +45,7 @@ export async function getStaticPaths() {
 export async function getStaticProps({params}) {
     // Call an external API endpoint to get posts
     //Data Fetch
+    
     const id = params.slug.split("-").slice(-1)[0]
     const data = await unfetch(`https://rickandmortyapi.com/api/character/${id}`)
     const char = await data.json()
