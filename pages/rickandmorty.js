@@ -62,7 +62,7 @@ export default rick;
 
 
 /* export async function getStaticProps() {
-    
+    as
     
     // Call an external API endpoint to get posts
     //Data 
