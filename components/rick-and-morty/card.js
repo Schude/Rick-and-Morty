@@ -4,35 +4,47 @@ import styles from '../components-styles/rickandmort.module.css'
 import unfetch from 'isomorphic-unfetch'
 import { useState } from 'react'
 import { useEffect } from 'react'
-const useFetch = (url, page) =>  {
-    const [char2, setChar] = useState()
+
+
+
+
+
+const useFetch = (page) =>  {
+    const url = `https://rickandmortyapi.com/api/character/?page=${page}`
+    const [chars, setChars] = useState()
+    /* const [deneme, setDeneme] = useState(5) */
 
     useEffect(async () => {
         const res = await unfetch(url)
         const data = await res.json()
-        setChar(data)
+        setChars(data)
         
 
     }, [page])
-    return { char2 }
+    return { chars,url }
 }
 
+
 function cardContainer(){
-
-    const [page ,setPage] = useState(1);
-    const url = `https://rickandmortyapi.com/api/character/?page=${page}`
-    const {char2} = useFetch(url,page);
-
     
+    const [page ,setPage] = useState(1);
+    const {chars} = useFetch(page);
+    /**
+     * Linkleri component yapıp page veya id oradan gönderilebilir??
+     * pagination.
+     */
     return <div>
     
+
+
     <p>Page: {page}</p>
         <button onClick={() => setPage(curr =>curr -1)}>Prev Page</button>    
         <button onClick={() => setPage(curr =>curr +1)}>Next Page</button>
+        
 
     <div className={styles.container}>
     
-    {char2 && char2.results.map(char => (
+    {chars && chars.results.map(char => (
     <div key={char.id} className={styles.card}>
 
     <figure className={styles.imgBx}>

@@ -1,12 +1,13 @@
 import unfetch from 'isomorphic-unfetch'
 import Layout from '../../components/Layout/layout'
 import slug from 'slug'
-import styles from '../../components/components-styles/char-detail.module.css'
+
 
 
 
 function charDetail({char}){
     
+   
     
     return <div>
         <h1>Rick And Morty</h1>
@@ -27,6 +28,7 @@ function charDetail({char}){
 export default charDetail;
 
 export async function getStaticPaths() {
+    
     
     const data = await unfetch(`https://rickandmortyapi.com/api/character/?page=${1}`)
     const chars = await data.json()

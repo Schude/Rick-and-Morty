@@ -11,7 +11,7 @@ function rick(){
     return <div>
 
         <h1 className={styles.greet}>Rick And Morty</h1>
-        <Layout/>
+       {/*  <Layout/> */}
 
         <Card/>
 
