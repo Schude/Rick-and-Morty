@@ -1,5 +1,4 @@
 import Link from "next/link";
-import slug from "slug";
 import styles from "../components-styles/rickandmort.module.css";
 import unfetch from "isomorphic-unfetch";
 import { useState } from "react";
@@ -22,7 +21,6 @@ function cardContainer() {
   const [page, setPage] = useState(1);
   const { chars } = useFetch(page);
   /**
-   * Linkleri component yapıp page veya id oradan gönderilebilir??
    * pagination.
    */
   return (
@@ -39,10 +37,7 @@ function cardContainer() {
                 <img className={styles.image} src={char.image}></img>
               </figure>
 
-              <Link
-                href={`./characters/[id]`}
-                as= {`./characters/${char.id}`}
-              >
+              <Link href={`./characters/[id]`} as={`./characters/${char.id}`}>
                 <div className={styles.test}>
                   <a className={styles.link}>{char.name}</a>
                 </div>
