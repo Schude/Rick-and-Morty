@@ -3,6 +3,8 @@ body {
     Geneva, Verdana, sans-serif;
   font-size: 24px;
   color: rgb(197, 156, 115);
+  margin: 0 auto;
+  width: 80%;
 }
 h1,
 h2 {

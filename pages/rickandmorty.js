@@ -11,7 +11,7 @@ function rick() {
       <Card />
 
     </div>
-  );
+  );  
 }
 
 export default rick;

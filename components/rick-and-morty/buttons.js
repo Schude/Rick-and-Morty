@@ -1,9 +1,8 @@
 function Buttons(props) {
   return (
     <div>
-      <button onClick={console.log(props.text)}>Prneeev Page</button>
-      <button onClick={console.log(props.text2)}>Dnet Page</button>
-      <div>{props.text}</div>
+      <button> Prev</button>
+      <button onClick={console.log(props.id)}> Next </button>
     </div>
   );
 }
