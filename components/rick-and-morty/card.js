@@ -7,7 +7,6 @@ import { useEffect } from "react";
 const useFetch = (page) => {
   const url = `https://rickandmortyapi.com/api/character/?page=${page}`;
   const [chars, setChars] = useState();
-  /* const [deneme, setDeneme] = useState(5) */
 
   useEffect(async () => {
     const res = await unfetch(url);
@@ -28,6 +27,11 @@ function cardContainer() {
       <p>Page: {page}</p>
       <button onClick={() => setPage((curr) => curr - 1)}>Prev Page</button>
       <button onClick={() => setPage((curr) => curr + 1)}>Next Page</button>
+
+      <select>
+        {chars && chars.results.map((char) => 
+        <option>{char.name}</option>)}
+      </select>
 
       <div className={styles.container}>
         {chars &&

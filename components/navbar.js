@@ -20,6 +20,11 @@ function Navbar() {
             <a>Rick and Morty</a>
           </Link>
         </li>
+        <li className={styles.navbar_item}>
+          <Link href="/todoapp">
+            <a>To Do App</a>
+          </Link>
+        </li>
       </ul>
     </nav>
   );

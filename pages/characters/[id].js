@@ -1,6 +1,5 @@
 import unfetch from "isomorphic-unfetch";
 import Layout from "../../components/Layout/layout";
-import Buttons from "../../components/rick-and-morty/buttons";
 import Link from "next/link";
 
 const Char = ({ id, name, image }) => {
