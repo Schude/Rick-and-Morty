@@ -25,6 +25,11 @@ function Navbar() {
             <a>To Do App</a>
           </Link>
         </li>
+        <li className={styles.navbar_item}>
+          <Link href="/Game">
+            <a>Game Database</a>
+          </Link>
+        </li>
       </ul>
     </nav>
   );

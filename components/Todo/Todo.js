@@ -9,8 +9,7 @@ const Todo = (props) =>
 }} onClick={props.toggleComplete}>{props.todo.text}
 
 </div>
-
-<Buttons deleteCompletely ={props.deleteCompletely}/>
+    <button onClick ={props.deleteCompletely}>Delete</button>
 </div>
 
 
