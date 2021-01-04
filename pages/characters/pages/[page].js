@@ -1,5 +1,4 @@
 import unfetch from "isomorphic-unfetch";
-import Link from "next/link";
 import Card from "../../../components/rick-and-morty/card"
 
 
@@ -13,15 +12,7 @@ const Page = ({ chars }) => {
         <div> </div>
         <div>as</div>
       <div >
-       {/*  {chars &&
-          chars.results.map((char) => (
-            <div key={char.id} >
-              <figure >
-                <img  src={char.image}></img>
-              </figure>
-
-            </div>
-          ))} */}
+       
           <Card />
       </div>
       

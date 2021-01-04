@@ -20,7 +20,8 @@ function cardContainer() {
   const [page, setPage] = useState(3);
   const { chars } = useFetch(page);
   /**
-   * pagination.
+   * pagination. Component
+   * SearchBox Component
    */   
   return (
     <div>
@@ -30,10 +31,7 @@ function cardContainer() {
       <Link href={`./characters/pages/[page]`} as={`./characters/pages/${page}`}>
         <a>2</a>
       </Link>
-      <select>
-        {chars && chars.results.map((char) => 
-        <option>{char.name}</option>)}
-      </select>
+      
 
       <div className={styles.container}>
         {chars &&

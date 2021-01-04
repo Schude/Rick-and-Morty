@@ -6,17 +6,23 @@ import React from "react"
 export default class rick extends React.Component {
   render(){
     /**
+     * ****Location Div ****
+     * *Locationların olduğu yere götürecek
+     * *Search Component
+     * *Pagination
+     * *Chars Component
      * 
-     * 
+     ***** Character Div*****
+     * *Charactlerin olduğu yer
+     * *Search Component
+     * *Pagination
+     * *Chars Component
      */
     return (
       <div>
         <h1 className={styles.greet}>Rick And Morty</h1>
         <Layout />
-         <div>
-           <div>Locations</div>
-           <div>Characters</div>
-         </div>
+         
         <Card />
         
       </div>
