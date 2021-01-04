@@ -5,12 +5,18 @@ import React from "react"
 
 export default class rick extends React.Component {
   render(){
-
+    /**
+     * 
+     * 
+     */
     return (
       <div>
         <h1 className={styles.greet}>Rick And Morty</h1>
         <Layout />
-        
+         <div>
+           <div>Locations</div>
+           <div>Characters</div>
+         </div>
         <Card />
         
       </div>
@@ -18,4 +24,4 @@ export default class rick extends React.Component {
   }
 }
 
-/* export default rick; */
+

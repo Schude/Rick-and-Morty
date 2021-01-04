@@ -1,5 +1,5 @@
 import Link from "next/link";
-import styles from './components-styles/navbar.module.css'
+import styles from "./navbar.module.css";
 
 function Navbar() {
   return (
@@ -23,11 +23,6 @@ function Navbar() {
         <li className={styles.navbar_item}>
           <Link href="/todoapp">
             <a>To Do App</a>
-          </Link>
-        </li>
-        <li className={styles.navbar_item}>
-          <Link href="/Game">
-            <a>Game Database</a>
           </Link>
         </li>
       </ul>

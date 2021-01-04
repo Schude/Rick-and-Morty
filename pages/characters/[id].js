@@ -8,12 +8,12 @@ const Char = ({ id, name, image }) => {
       <h1>Rick And Morty</h1>
       <Layout />
       <br></br>
-      <Link href={`./${id-1}`}>
-		  <a>Prev Character</a>
-	  </Link>
-      <Link href={`./${id+1}`}>
-		  <a>Next Character</a>
-	  </Link>
+      <Link href={`./${id - 1}`}>
+        <a>Prev Character</a>
+      </Link>
+      <Link href={`./${id + 1}`}>
+        <a>Next Character</a>
+      </Link>
       <figure>
         <img src={image}></img>
       </figure>

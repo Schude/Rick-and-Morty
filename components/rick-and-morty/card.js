@@ -17,17 +17,19 @@ const useFetch = (page) => {
 };
 
 function cardContainer() {
-  const [page, setPage] = useState(1);
+  const [page, setPage] = useState(3);
   const { chars } = useFetch(page);
   /**
    * pagination.
-   */
+   */   
   return (
     <div>
       <p>Page: {page}</p>
       <button onClick={() => setPage((curr) => curr - 1)}>Prev Page</button>
       <button onClick={() => setPage((curr) => curr + 1)}>Next Page</button>
-
+      <Link href={`./characters/pages/[page]`} as={`./characters/pages/${page}`}>
+        <a>2</a>
+      </Link>
       <select>
         {chars && chars.results.map((char) => 
         <option>{char.name}</option>)}
