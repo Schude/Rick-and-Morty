@@ -1,5 +1,5 @@
 import unfetch from "isomorphic-unfetch";
-import Layout from "../../components/Layout/layout";
+import Layout from "../../../components/Layout/layout";
 import Link from "next/link";
 
 const Char = ({ id, name, image }) => {
