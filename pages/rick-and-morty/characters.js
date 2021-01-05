@@ -5,7 +5,7 @@ import styles from '../../components/components-styles/rickandmort.module.css'
 import Pagination from '../../components/rick-and-morty/page'
 export default function Characters({ chars }) {
   const [pageNode, setPageNode] = useState(1);
-    const page =   chars.info.next.slice(-1)
+    
     /**
      * Tıklanıldığında Page Nodeu değiştirecez..
      */
@@ -14,16 +14,21 @@ export default function Characters({ chars }) {
       <h1>Characters</h1>
       <h2>{pageNode}, Next PAGE</h2>
 
-        <Pagination next = {page} to = "../characters/pages/[pages]" as = {`../characters/pages/${page}`} />
-        <div onClick={() =>setPageNode(pageNode+1)}>
+        {/* <Pagination /> */}
+   {/*      <div >
+       <Link
+        href={`../characters/pages/[pages]`}
+        as={`../characters/pages/${pageNode+1}`}
+      >
+        <a > {pageNode}.sayfa Component depil</a>
+      </Link>
+        </div>  */}
         <Link
         href={`../characters/pages/[pages]`}
-        as={`../characters/pages/${page}`}
+        as={`../characters/pages/${1}`}
       >
-        <a > {page}.sayfa componen depil</a>
+        <a > {pageNode}.sayfa Component depil</a>
       </Link>
-        </div>
-      
 
       <div className={styles.container}>
         {chars &&

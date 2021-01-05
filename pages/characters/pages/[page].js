@@ -1,20 +1,19 @@
 import unfetch from "isomorphic-unfetch";
+import Pagination from '../../../components/rick-and-morty/page'
 import Card from "../../../components/rick-and-morty/card";
 
 const Page = ({ chars }) => {
-  console.log(chars);
+  const currentPage = chars.info.next.slice(-1)-1
+ 
   return (
     <div>
       <h1>Rick And Morty</h1>
+      <Pagination curr = {currentPage}/>
 
-      <div>{chars.results.map((char) => (
-        <div key={char.id}> {char.name} </div>
-      ))}</div>
-
-      <div>{chars.info.next}</div>
+      <Card chars = {chars}/>
     </div>
   );
-};
+};  
 
 export async function getStaticPaths() {
 
@@ -33,13 +32,15 @@ export async function getStaticPaths() {
 }
 
 export const getStaticProps = async ({params}) => {
+  console.log(params)
   const res = await unfetch(
     `https://rickandmortyapi.com/api/character/?page=${params.page}`
   );
-  const chars = await res.json();
+  const chars = await res.json(); 
   
   return {props:{
-    chars
+    chars,
+    
   }  };
 };
 
