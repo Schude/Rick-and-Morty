@@ -33,9 +33,7 @@ export default class rick extends React.Component {
         <Link href="./rick-and-morty/locations" as="">
           <a>Locations</a>
         </Link>
-        <Link href="./rick-and-morty/characters" as="">
-          <a>anüü</a>
-        </Link>
+       
       </div>
     );
   }

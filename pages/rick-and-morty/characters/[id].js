@@ -2,6 +2,9 @@ import unfetch from "isomorphic-unfetch";
 import Layout from "../../../components/Layout/layout";
 import Link from "next/link";
 
+/*
+Burayı Daha detaylı Hala getir
+*/
 const Char = ({ id, name, image }) => {
   return (
     <div>

@@ -1,7 +1,9 @@
 import unfetch from "isomorphic-unfetch";
-import Pagination from "../../../../components/rick-and-morty/page";
+import Pagination from "../../../../components/rick-and-morty/pagination";
 import Card from "../../../../components/rick-and-morty/card";
-
+/**
+ * Pathleri hallet.
+ */
 const Page = ({ chars }) => {
   const currentPage = chars.info.next.slice(-1) - 1;
 
@@ -15,8 +17,8 @@ const Page = ({ chars }) => {
   );
 };
 
-export async function getStaticPaths({ query }) {
-  console.log(query, "Query");
+export async function getStaticPaths() {
+  
   return {
     paths: [
       { params: { page: "1" } },
@@ -42,6 +44,7 @@ export const getStaticProps = async ({ params }) => {
   return {
     props: {
       chars,
+      
     },
   };
 };

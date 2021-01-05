@@ -1,6 +1,9 @@
 import React from "react";
 import Link from "next/Link";
-
+/**
+ * Pagination ı güzelleştir.
+ * 
+ **/
 export default function Pagination({ curr }) {
   const dynamicPages = [];
 
