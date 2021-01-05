@@ -1,30 +1,46 @@
 import unfetch from "isomorphic-unfetch";
-import Card from "../../../components/rick-and-morty/card"
-
+import Card from "../../../components/rick-and-morty/card";
 
 const Page = ({ chars }) => {
-
+  console.log(chars);
   return (
     <div>
       <h1>Rick And Morty</h1>
-        
-        <div>as</div>
-        <div> </div>
-        <div>as</div>
-      <div >
-       
-          <Card />
-      </div>
-      
+
+      <div>{chars.results.map((char) => (
+        <div key={char.id}> {char.name} </div>
+      ))}</div>
+
+      <div>{chars.info.next}</div>
     </div>
   );
 };
 
-Page.getInitialProps = async ({ query }) => {
-  const res = await unfetch(`https://rickandmortyapi.com/api/character/?page=${query.page}`);
+export async function getStaticPaths() {
+
+  return {
+    paths: [
+      { params: { page: '1' } },
+      { params: { page: '2' } },
+      { params:  { page: '3' } },
+      { params:  { page: '4' } },
+      { params:  { page: '5' } },
+      { params:  { page: '6' } },
+      { params:  { page: '7' } },
+    ],
+    fallback: false
+  }
+}
+
+export const getStaticProps = async ({params}) => {
+  const res = await unfetch(
+    `https://rickandmortyapi.com/api/character/?page=${params.page}`
+  );
   const chars = await res.json();
   
-  return {chars};
+  return {props:{
+    chars
+  }  };
 };
 
 export default Page;

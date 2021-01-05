@@ -2,6 +2,7 @@ import Layout from "../components/Layout/layout";
 import styles from "../components/components-styles/rickandmort.module.css";
 import Card from "../components/rick-and-morty/card";
 import React from "react"
+import Link from "next/link";
 
 export default class rick extends React.Component {
   render(){
@@ -10,7 +11,7 @@ export default class rick extends React.Component {
      * *Locationların olduğu yere götürecek
      * *Search Component
      * *Pagination
-     * *Chars Component
+     * *locs Component
      * 
      ***** Character Div*****
      * *Charactlerin olduğu yer
@@ -21,7 +22,15 @@ export default class rick extends React.Component {
     return (
       <div>
         <h1 className={styles.greet}>Rick And Morty</h1>
+
         <Layout />
+
+        <Link href = "./rick-and-morty/characters" as="">
+          <a>Characters</a>
+        </Link>
+        <Link href = "./rick-and-morty/locations" as="">
+          <a>Locations</a>
+        </Link>
          
         <Card />
         

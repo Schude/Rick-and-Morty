@@ -17,7 +17,7 @@ const useFetch = (page) => {
 };
 
 function cardContainer() {
-  const [page, setPage] = useState(3);
+  const [page, setPage] = useState();
   const { chars } = useFetch(page);
   /**
    * pagination. Component
@@ -26,8 +26,8 @@ function cardContainer() {
   return (
     <div>
       <p>Page: {page}</p>
-      <button onClick={() => setPage((curr) => curr - 1)}>Prev Page</button>
-      <button onClick={() => setPage((curr) => curr + 1)}>Next Page</button>
+      {/* <button onClick={() => setPage((curr) => curr - 1)}>Prev Page</button>
+      <button onClick={() => setPage((curr) => curr + 1)}>Next Page</button> */}
       <Link href={`./characters/pages/[page]`} as={`./characters/pages/${page}`}>
         <a>2</a>
       </Link>
@@ -41,7 +41,7 @@ function cardContainer() {
                 <img className={styles.image} src={char.image}></img>
               </figure>
 
-              <Link href={`./characters/[id]`} as={`./characters/${char.id}`}>
+              <Link href={`../[id]`} as={`../${char.id}`}>
                 <div className={styles.test}>
                   <a className={styles.link}>{char.name}</a>
                 </div>
