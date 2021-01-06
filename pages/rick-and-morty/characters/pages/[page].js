@@ -1,12 +1,8 @@
 import unfetch from "isomorphic-unfetch";
 import Pagination from "../../../../components/rick-and-morty/pagination";
 import Card from "../../../../components/rick-and-morty/card";
-/**
- * Pathleri hallet.
- */
-const Page = ({ chars }) => {
-  const currentPage = chars.info.next.slice(-1) - 1;
 
+const Page = ({ chars, currentPage }) => {
   return (
     <div>
       <h1>Rick And Morty</h1>
@@ -18,33 +14,27 @@ const Page = ({ chars }) => {
 };
 
 export async function getStaticPaths() {
-  
+
+  const paths = [];
+  for (let i = 0; i < 35; i++) {
+    paths.push({ params: { page: i.toString() } });
+  }
+
   return {
-    paths: [
-      { params: { page: "1" } },
-      { params: { page: "2" } },
-      { params: { page: "3" } },
-      { params: { page: "4" } },
-      { params: { page: "5" } },
-      { params: { page: "6" } },
-      { params: { page: "7" } },
-    ],
+    paths,
     fallback: false,
   };
 }
 
 export const getStaticProps = async ({ params }) => {
-  console.log(typeof params);
-  console.log(params);
-  const res = await unfetch(
-    `https://rickandmortyapi.com/api/character/?page=${params.page}`
-  );
+  const res = await unfetch(`https://rickandmortyapi.com/api/character/?page=${params.page}`);
   const chars = await res.json();
-
+  const currentPage = params.page;
+  console.log(params.page);
   return {
     props: {
       chars,
-      
+      currentPage,
     },
   };
 };
