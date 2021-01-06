@@ -1,27 +1,20 @@
 import React from "react";
 import Link from "next/Link";
-/**
- * Pagination ı güzelleştir.
- * 
- **/
+
 export default function Pagination({ curr }) {
-  const dynamicPages = [];
-
-  for (let i = curr - 3; i <= curr + 3; i++) {
-    if (i < 35 && i > 0) {
-      dynamicPages.push(i);
-    }
-  }
-
+  const CurrentPage =parseInt(curr)
+  const prevPage = CurrentPage-1
+  const nextPage = CurrentPage+1
   return (
     <div>
-      <ul>
-        {dynamicPages.map((elem) => (
-          <Link href={`../pages/[pages]`} as={`../pages/${elem}`}>
-            <a> {elem}</a>
+      
+          <Link href={`../pages/[pages]`} as={`../pages/${prevPage}`}>
+            <a> Prev</a>
           </Link>
-        ))}
-      </ul>
+          <Link href={`../pages/[pages]`} as={`../pages/${nextPage}`}>
+            <a> Next</a>
+          </Link>
+       
     </div>
   );
 }
