@@ -2,7 +2,7 @@ import Layout from "../components/Layout/layout";
 import styles from "../components/components-styles/rickandmort.module.css";
 import React from "react";
 import Link from "next/link";
-import unfetch from "isomorphic-unfetch";
+
 
 export default class rick extends React.Component {
   render() {
@@ -30,7 +30,7 @@ export default class rick extends React.Component {
         >
           <a>Characters</a>
         </Link>
-        <Link href="./rick-and-morty/locations" as="">
+        <Link href="./rickandmorty/locations/pages/[page]" as = {`./rickandmorty/locations/pages/${1}`}>
           <a>Locations</a>
         </Link>
        
@@ -39,13 +39,3 @@ export default class rick extends React.Component {
   }
 }
 
-export const getStaticProps = async () => {
-  const res = await unfetch("https://rickandmortyapi.com/api/character");
-  const chars = await res.json();
-
-  return {
-    props: {
-      chars,
-    },
-  };
-};

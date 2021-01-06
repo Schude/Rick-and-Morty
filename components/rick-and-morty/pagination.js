@@ -8,10 +8,10 @@ export default function Pagination({ curr }) {
   return (
     <div>
       
-          <Link href={`../pages/[pages]`} as={`../pages/${prevPage}`}>
+          <Link href={`../pages/[page]`} as={`../pages/${prevPage}`}>
             <a> Prev</a>
           </Link>
-          <Link href={`../pages/[pages]`} as={`../pages/${nextPage}`}>
+          <Link href={`../pages/[page]`} as={`../pages/${nextPage}`}>
             <a> Next</a>
           </Link>
        
