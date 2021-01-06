@@ -23,10 +23,10 @@ export default class rick extends React.Component {
         <h1 className={styles.greet}>Rick And Morty</h1>
 
         <Layout />
-
+        
         <Link
-          href={`./rick-and-morty/characters/pages/[pages]`}
-          as={`./rick-and-morty/characters/pages/${1}`}
+          href={`./rickandmorty/characters/pages/[pages]`}
+          as={`./rickandmorty/characters/pages/${1}`}
         >
           <a>Characters</a>
         </Link>

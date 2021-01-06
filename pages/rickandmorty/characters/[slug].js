@@ -11,12 +11,7 @@ const Char = ({ id, name, image }) => {
       <h1>Rick And Morty</h1>
       <Layout />
       <br></br>
-      <Link href={`./${id - 1}`}>
-        <a>Prev Character</a>
-      </Link>
-      <Link href={`./${id + 1}`}>
-        <a>Next Character</a>
-      </Link>
+      
       <figure>
         <img src={image}></img>
       </figure>
@@ -26,9 +21,8 @@ const Char = ({ id, name, image }) => {
 };
 
 Char.getInitialProps = async ({ query }) => {
-  const res = await unfetch(
-    `https://rickandmortyapi.com/api/character/${query.id}`
-  );
+  const id = query.slug.split("-").slice(-1);
+  const res = await unfetch(`https://rickandmortyapi.com/api/character/${id}`);
   const data = await res.json();
 
   return data;
