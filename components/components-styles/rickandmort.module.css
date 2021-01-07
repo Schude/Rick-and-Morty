@@ -14,6 +14,7 @@
   height: 300px;
   background-color: rgb(218, 170, 107);
   margin: 30px 0;
+  padding:50px 0;
   border-radius: 10px;
   flex-direction: column;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
@@ -21,7 +22,7 @@
 }
 
 .container .card:hover {
-  height: 360px;
+  height: 400px;
 }
 
 .container .card .imgBx {
@@ -29,19 +30,18 @@
   max-width: 350px;
   height: 20px;
   top: -60px;
-  right: 25px;
+  right: 20px;
 
   z-index: 1;
 }
 
 .imgBx img {
+  border-top:5px solid black;
   max-width: 350px;
   height: 320px;
   border-radius: 5px;
-  mask-image: linear-gradient(to top, rgb(0, 0, 0) 90%, rgba(0, 0, 0, 0)  );
-  /* mask-image: linear-gradient(to bottom, rgb(0, 0, 0) 90%, rgba(0, 0, 0, 0)  );
-  mask-image: linear-gradient(to left, rgb(0, 0, 0) 90%, rgba(0, 0, 0, 0)  ); */
-  /* mask-image: linear-gradient(to right, rgb(0, 0, 0) 95%, rgba(0, 0, 0, 0)  ); */
+  mask-image: linear-gradient(to top, rgb(0, 0, 0) 80%, rgba(0, 0, 0, 0)  );
+
   
   
 }
@@ -72,4 +72,5 @@
 }
 
 /*
-Arka Planları Gradient Yap*/
+Arka Planları Gradient Yap
+*/
