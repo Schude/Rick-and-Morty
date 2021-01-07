@@ -1,53 +1,75 @@
 .container {
-  width: 100%;
-  margin: 5rem auto;
+  width: 110%;
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  justify-content: space-around;
+  background: #122e3f;
   flex-wrap: wrap;
-  background-color: rgba(33, 36, 35, 0.288);
-  border: 3px solid rgba(16, 17, 17, 0.89);
-  border-radius:5px;
-;
+  padding: 30px;
+  color: aliceblue;
 }
 
-.card {
-  margin: 5px;
-  margin-bottom: 5px;
-  max-width: 300px;
-  max-height: 300px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  background-color: rgba(63, 61, 55, 0.658);
-}
-
-.imgBx {
-  margin: 0;
-}
-
-.test {
-  width: 100%;
-}
-.link {
-  display: block;
-  margin: 0;
-  max-height: 68px;
+.container .card {
   position: relative;
-  top: -73px;
-  padding: 20px 0;
-  background-color: rgba(33, 36, 35, 0.719);
-  text-align: center;
-  align-items: center;
+  max-width: 350px;
+  height: 300px;
+  background-color: rgb(218, 170, 107);
+  margin: 30px 0;
+  border-radius: 10px;
+  flex-direction: column;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
   transition: 0.3s ease-in-out;
-  visibility: hidden;
-  opacity: 0;
-  color: rgb(255, 255, 255);
-  cursor: pointer;
 }
 
-.card:hover .link {
-  visibility: visible;
-  opacity: 1;
+.container .card:hover {
+  height: 360px;
+}
+
+.container .card .imgBx {
+  position: relative;
+  max-width: 350px;
+  height: 20px;
+  top: -60px;
+  right: 25px;
+
   z-index: 1;
 }
+
+.imgBx img {
+  max-width: 350px;
+  height: 320px;
+  border-radius: 5px;
+  mask-image: linear-gradient(to top, rgb(0, 0, 0) 90%, rgba(0, 0, 0, 0)  );
+  /* mask-image: linear-gradient(to bottom, rgb(0, 0, 0) 90%, rgba(0, 0, 0, 0)  );
+  mask-image: linear-gradient(to left, rgb(0, 0, 0) 90%, rgba(0, 0, 0, 0)  ); */
+  /* mask-image: linear-gradient(to right, rgb(0, 0, 0) 95%, rgba(0, 0, 0, 0)  ); */
+  
+  
+}
+
+.content {
+  position: relative;
+
+  padding: 20px 15px;
+  top: 230px;
+  text-align: center;
+  background-color: rgba(33, 40, 71, 0.548);
+  color: aliceblue;
+  visibility: hidden;
+  opacity: 0;
+
+  transition: 0, 5s ease-in-out;
+}
+.content .link {
+  font-weight: bold;
+  color: rgb(212, 152, 62);
+}
+
+.container .card:hover .content {
+  visibility: visible;
+  opacity: 1;
+  margin-top: 10px;
+  transition-delay: 0.2s;
+}
+
+/*
+Arka Planları Gradient Yap*/
