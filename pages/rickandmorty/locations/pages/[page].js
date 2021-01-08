@@ -43,6 +43,7 @@ export const getStaticProps = async ({ params }) => {
        currentPage
       
     },
+    revalidate: 300,
   };
 };
 
