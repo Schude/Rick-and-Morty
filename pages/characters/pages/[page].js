@@ -1,11 +1,12 @@
 import unfetch from "isomorphic-unfetch";
-import Pagination from "../../../../components/rick-and-morty/pagination";
-import Card from "../../../../components/rick-and-morty/card";
-
+import Pagination from "../../../components/rick-and-morty/pagination";
+import Card from "../../../components/rick-and-morty/card";
+import Search from "../../../components/rick-and-morty/search"
 const Page = ({ chars, currentPage }) => {
   return (
     <div>
       <h1>Rick And Morty</h1>
+      <Search />
       <Pagination curr={currentPage} />
 
       <Card chars={chars} />

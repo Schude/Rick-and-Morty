@@ -1,6 +1,6 @@
 import unfetch from "isomorphic-unfetch";
-import Pagination from "../../../../components/rick-and-morty/pagination";
-import Card from "../../../../components/rick-and-morty/card";
+import Pagination from "../../../components/rick-and-morty/pagination";
+import Card from "../../../components/rick-and-morty/card";
 
 const Page = ({ locations,currentPage }) => {
     console.log(locations)
