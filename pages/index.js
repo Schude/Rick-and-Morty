@@ -1,8 +1,7 @@
-import Layout from "../components/Layout/layout";
 import styles from "../components/components-styles/rickandmort.module.css";
 import React from "react";
 import Link from "next/link";
-
+import Search from "../components/rick-and-morty/search";
 export default function Home() {
   return (
     <div>
@@ -14,6 +13,7 @@ export default function Home() {
       <Link href="./locations/pages/[page]" as={`./locations/pages/${1}`}>
         <a>Locations</a>
       </Link>
+      <Search href = "./characters/search/[search]"/>
     </div>
   );
 }

@@ -1,7 +1,6 @@
 import unfetch from "isomorphic-unfetch";
 import React from "react";
 import Card from "../../../components/rick-and-morty/card";
-import Pagination from "../../../components/rick-and-morty/pagination";
 import Search from "../../../components/rick-and-morty/search";
 import _ from "lodash";
 const searchpage = (chars) => {

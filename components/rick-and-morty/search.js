@@ -1,7 +1,9 @@
 import React, {useState} from "react";
 import { useRouter } from 'next/router'
 const Search = () => {
-
+/**
+ * Searchi Karakteirn içine lamayı dene YARIN
+ */
 const [query, setQuery] = useState("");
 const router = useRouter()
 
