@@ -1,17 +1,28 @@
-import React from 'react'
+import React, {useState} from "react";
+import { useRouter } from 'next/router'
+const Search = () => {
 
-const search = () => {
+const [query, setQuery] = useState("");
+const router = useRouter()
 
-    return (
-        <div>
-            <form>
-                <input>
-                    
-                </input>
-                <button>Search</button>
-            </form>
-        </div>
-    )
-}
+const handleChange = event => {
+        setQuery(event.target.value);
+      };
+const handleSubmit = (event) =>{
+    event.preventDefault();
+    
+    router.push("../search/[search]", `../search/${query}`)
 
-export default search
+} 
+    
+  return (
+    <div>
+      <form onSubmit ={handleSubmit}>
+        <input onChange= {handleChange} value={query} name="value" type = "text" placeholder="Search..."></input>
+        <button type = "submit">Search</button>
+      </form>
+    </div>
+  );
+};
+
+export default Search;

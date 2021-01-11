@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/Link";
 
-export default function Pagination({ curr }) {
+export default function Pagination({ curr,next }) {
   const CurrentPage =parseInt(curr)
   const prevPage = CurrentPage-1
   const nextPage = CurrentPage+1
