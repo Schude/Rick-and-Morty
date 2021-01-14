@@ -1,7 +1,7 @@
-import styles from "../components/components-styles/rickandmort.module.css";
+import styles from "../styles/rickandmort.module.css";
 import React from "react";
 import Link from "next/link";
-import Search from "../components/rick-and-morty/search";
+import Search from "../components/search";
 export default function Home() {
   return (
     <div>

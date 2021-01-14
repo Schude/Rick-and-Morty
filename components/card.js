@@ -1,6 +1,6 @@
 import Link from "next/link";
 import slug from "slug";
-import styles from "../components-styles/rickandmort.module.css";
+import styles from "../styles/rickandmort.module.css";
 
 function cardContainer({ chars }) {
   return (
