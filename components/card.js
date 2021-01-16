@@ -2,7 +2,7 @@ import Link from "next/link";
 import slug from "slug";
 import styles from "../styles/rickandmort.module.css";
 
-function cardContainer({ chars }) {
+function Card({ chars }) {
   return (
     <div className={styles.main}>
       <div className={styles.container}>
@@ -12,7 +12,7 @@ function cardContainer({ chars }) {
               <figure className={styles.imgBx}>
                 <img className={styles.image} src={char.image}></img>
               </figure>
-              <div className = {styles.content}>
+              <div className={styles.content}>
                 <Link
                   href={`../[slug]`}
                   as={`../${slug(char.name)}-${char.id}`}
@@ -27,4 +27,4 @@ function cardContainer({ chars }) {
   );
 }
 
-export default cardContainer;
+export default Card;

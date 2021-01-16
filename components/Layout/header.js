@@ -1,17 +1,25 @@
 import Link from "next/link";
-import SvgRickMorty from '../icons/RickMorty'
+import SvgRickMorty from "../icons/RickMorty";
 import styles from "../../styles/navbar.module.css";
 
 function Header() {
   return (
     <header className={styles.headerWrapper}>
-      
       <nav className={styles.navbar}>
-        <Link href = "/" className={styles.homePage}>
-        <a><SvgRickMorty /></a>
+        <Link href="/" className={styles.homePage}>
+          <a>
+            <SvgRickMorty />{" "}
+          </a>
         </Link>
         <ul className={styles.nav_container}>
           <li className={styles.items}>
+            <Link
+              href={`./characters/pages/[pages]`}
+              as={`./characters/pages/${1}`}
+              className={styles.items}
+            >
+              <a>Characters</a>
+            </Link>
             <Link href="./about">
               <a>About</a>
             </Link>

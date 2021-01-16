@@ -1,4 +1,4 @@
-import Layout from '../components/Layout/layout'
+import Layout from "../components/Layout/layout";
 
 function Contact() {
   return (
@@ -8,6 +8,5 @@ function Contact() {
     </div>
   );
 }
-
 
 export default Contact;

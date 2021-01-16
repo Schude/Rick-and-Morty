@@ -1,27 +1,29 @@
-import React, {useState} from "react";
-import { useRouter } from 'next/router'
+import React, { useState } from "react";
+import { useRouter } from "next/router";
 const Search = () => {
-/**
- * Searchi Karakteirn içine lamayı dene YARIN
- */
-const [query, setQuery] = useState("");
-const router = useRouter()
+  const [query, setQuery] = useState("");
+  const router = useRouter();
 
-const handleChange = event => {
-        setQuery(event.target.value);
-      };
-const handleSubmit = (event) =>{
+  const handleChange = (event) => {
+    setQuery(event.target.value);
+  };
+  const handleSubmit = (event) => {
     event.preventDefault();
-    
-    router.push("../search/[search]", `../search/${query}`)
 
-} 
-    
+    router.push("../search/[search]", `../search/${query}`);
+  };
+
   return (
     <div>
-      <form onSubmit ={handleSubmit}>
-        <input onChange= {handleChange} value={query} name="value" type = "text" placeholder="Search..."></input>
-        <button type = "submit">Search</button>
+      <form onSubmit={handleSubmit}>
+        <input
+          onChange={handleChange}
+          value={query}
+          name="value"
+          type="text"
+          placeholder="Search..."
+        ></input>
+        <button type="submit">Search</button>
       </form>
     </div>
   );
