@@ -11,8 +11,8 @@ export default function Home() {
 
       <main className={styles.mainLayout}>
         <section className={styles.mainContainer}>
-          <h1 className={styles.mainTitle}>Rick and Morty </h1>
-     {/*      <h1 className={styles.mainTitle}></h1> */}
+          <h1 className={styles.mainTitle}>Rick and Morty</h1>
+          <h1 className={styles.mainTitle}>Characters</h1>
           <div className={styles.mainImage}>
             <Siluet />
           </div>
