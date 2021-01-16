@@ -1,10 +1,11 @@
-import Navbar from "./navbar";
-import styles from "./layout.module.css";
+import Header from './header'
+import styles from '../../styles/main.module.css'
 function Layout({ children }) {
   return (
-    <div className={styles.welcome}>
+    <div className={styles.mainLayout}>
+    <Header/>
       {children}
-      <Navbar/>
+      
     </div>
   );
 }

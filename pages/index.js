@@ -1,56 +1,34 @@
-import styles from "../styles/rickandmort.module.css";
 import React from "react";
 import Link from "next/link";
-import Search from "../components/search";
+import Layout from "../components/Layout/layout";
+import Siluet from '../components/icons/Siluet'
+import styles from '../styles/mainWrapper.module.css'
 export default function Home() {
   return (
     <div>
-      <h1 className={styles.greet}>Rick And Morty</h1>
+    
+      <Layout/>
 
-      <Link href={`./characters/pages/[pages]`} as={`./characters/pages/${1}`}>
-        <a>Characters</a>
-      </Link>
-      <Link href="./locations/pages/[page]" as={`./locations/pages/${1}`}>
-        <a>Locations</a>
-      </Link>
-      <Search href = "./characters/search/[search]"/>
+      <main className={styles.mainLayout}>
+        <section className={styles.mainContainer}>
+          <h1 className={styles.mainTitle}>Rick and Morty </h1>
+     {/*      <h1 className={styles.mainTitle}></h1> */}
+          <div className={styles.mainImage}>
+            <Siluet />
+          </div>
+        </section>
+        <section className = {styles.cardsLayout}>
+        <div className = {styles.cardsContainer}>
+          <article className = {styles.characterCard}></article>
+          <article className = {styles.characterCard}></article>
+          <article className = {styles.characterCard}></article>
+          <article className = {styles.characterCard}></article>
+          <article className = {styles.characterCard}></article>
+        </div>
+
+        </section>
+      </main>
+
     </div>
   );
 }
-
-/* export default class rick extends React.Component {
-  render() { */
-/**
-     * ****Location Div ****
-     * *Locationların olduğu yere götürecek
-     * *Search Component
-     * *Pagination
-     * *locs Component
-     *
-     ***** Character Div*****
-     
-     * *Search Component
-     
-     */
-/* return (
-      <div>
-        <h1 className={styles.greet}>Rick And Morty</h1>
-
-        <Layout />
-
-        <Link
-          href={`./rickandmorty/characters/pages/[pages]`}
-          as={`./rickandmorty/characters/pages/${1}`}
-        >
-          <a>Characters</a>
-        </Link>
-        <Link
-          href="./rickandmorty/locations/pages/[page]"
-          as={`./rickandmorty/locations/pages/${1}`}
-        >
-          <a>Locations</a>
-        </Link>
-      </div>
-    );
-  }
-} */

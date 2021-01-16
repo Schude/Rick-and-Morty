@@ -1,0 +1,70 @@
+.mainLayout {
+  display: block;
+  background-color: #f4a734;
+  padding-top: 2px;
+}
+.mainContainer {
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  flex-direction: column;
+  height: calc(50vh - 60px);
+  text-align: center;
+  position: relative;
+}
+.mainTitle {
+  text-align: center;
+  font-size: 5.625rem;
+  display: block;
+  line-height: 1.1;
+  padding-bottom: calc(0.40625rem - 1px);
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  margin: 0px;
+  color: rgb(32, 35, 41);
+  border: none;
+  font-weight: 900;
+  z-index: 1;
+  font-size: 5.625rem;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  word-wrap: break-word;
+}
+.mainImage {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.cardsLayout {
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  padding: 4.5rem 0px;
+  background: rgb(36, 40, 47);
+  min-height: calc(50vh - 60px);
+}
+.cardsContainer {
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1920px;
+}
+.characterCard {
+  width: 350px;
+  height: 400px;
+  display: flex;
+  overflow: hidden;
+  background: rgb(60, 62, 68);
+  border-radius: 0.5rem;
+  margin: 0.75rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
