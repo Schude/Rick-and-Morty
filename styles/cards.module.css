@@ -1,0 +1,116 @@
+.cardsLayout {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 2rem 0px;
+    background: rgb(36, 40, 47);
+    min-height: calc(50vh - 60px);
+  }
+  .cardsContainer {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1920px;
+  }
+  
+  .characterCard {
+    width: 350px;
+    height: 400px;
+    display: flex;
+  
+    flex-direction: column-reverse;
+    align-items: center;
+    overflow: hidden;
+    background: rgb(60, 62, 68);
+    border-radius: 0.5rem;
+    margin: 0.75rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+      rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  }
+  .characterImage {
+    flex: 2 1 0%;
+    width: 100%;
+    cursor: pointer;
+  }
+  .characterImage .image {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+  }
+  .characterContent {
+    visibility: hidden;
+    opacity: 0;
+    flex: 3 1 0%;
+    position: absolute;
+  
+    /* padding: 0 5rem; */
+    min-width: 350px;
+    max-width: 350px;
+    color: rgb(255, 255, 255);
+    border-radius: 0.5rem;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    display: flex;
+  
+    flex-direction: column;
+    background-color: rgba(22, 20, 20, 0.719);
+    transition: 0.2s ease-in-out;
+  }
+  .contentSection {
+    flex: 5 5 5%;
+    display: flex;
+  
+    flex-direction: column;
+    align-items: center;
+  }
+  .contentSection a {
+    text-decoration: none;
+    color: rgb(245, 245, 245);
+  }
+  .contentSection a h2 {
+    font-size: 1.2rem;
+  }
+  .contentSection a h2:hover {
+    color: #f4a734;
+  }
+  
+  .contentSection:first-child {
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+  }
+  .contentSection:first-child {
+    justify-content: flex-end;
+    -webkit-box-pack: end;
+  }
+  .contentSection:not(:last-child) {
+    border-bottom: 1.5px solid rgba(212, 136, 50, 0.63);
+  }
+  
+  .characterStatus {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    text-transform: capitalize;
+  }
+  .characterContent span {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  .textGray {
+    color: rgb(158, 158, 158);
+  }
+  
+  .characterCard:hover .characterContent {
+    visibility: visible;
+    opacity: 1;
+  
+    transition-delay: 0.1s;
+  }
+  

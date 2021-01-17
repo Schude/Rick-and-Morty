@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/Link";
 import slug from "slug";
-import styles from "../styles/mainWrapper.module.css";
+import styles from "../styles/cards.module.css";
 
 const charactercard = ({ characters }) => {
   return (
@@ -11,22 +11,27 @@ const charactercard = ({ characters }) => {
           characters.map((character) => (
             <article key={character.id} className={styles.characterCard}>
               <div className={styles.characterImage}>
-                <img className={styles.image} src={character.image} alt = {character.name}></img>
+                <img
+                  className={styles.image}
+                  src={character.image}
+                  alt={character.name}
+                ></img>
               </div>
               <div className={styles.characterContent}>
                 <div className={styles.contentSection}>
                   <Link
                     href={`/characters/[slug]`}
-                    as={`/characters/${slug(character.name)}-${
-                      character.id
-                    }`}
+                    as={`/characters/${slug(character.name)}-${character.id}`}
                   >
                     <a className={styles.characterLink}>
                       <h2>{character.name}</h2>
                     </a>
                   </Link>
                   <span className={styles.characterStatus}>
-                    {character.status} - {character.species}
+                    <span className={styles.characterAlive} style={character.status === "Alive" ? {color:"#5c4"} : character.status === "Dead" ? {color:"#d63d2e"}: {}} >
+                      {character.status} 
+                    </span>
+                      {` - ${character.species}`}
                   </span>
                 </div>
 
