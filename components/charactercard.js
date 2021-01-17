@@ -1,44 +1,54 @@
 import React from "react";
-import unfetch from "isomorphic-unfetch";
 import Link from "next/link";
+import slug from "slug";
 import styles from "../styles/mainWrapper.module.css";
 
-export default function charactercard() {
+const charactercard = ({characters}) => {
+  
     
   return (
-    <article className={styles.characterCard}>
+<section className={styles.cardsLayout}>
+    <div className = {styles.cardsContainer}>
+    
+    {characters && characters.map((character) => (
+      <article id= {character.id} className={styles.characterCard}>
       <div className={styles.characterImage}>
         <img
           className={styles.image}
-          src="https://rickandmortyapi.com/api/character/avatar/49.jpeg"
+          src={character.image}
         ></img>
       </div>
       <div className={styles.characterContent}>
         <div className={styles.contentSection}>
-          <Link href="#">
+          <Link href={`../[slug]`} as={`../${slug(character.name)}-${character.id}`}>
             <a className={styles.characterLink}>
-              <h2>Blamph</h2>
+              <h2>{character.name}</h2>
             </a>
           </Link>
-          <span className={styles.characterStatus}>Alive - Alien</span>
+          <span className={styles.characterStatus}>{character.status} - {character.species}</span>
         </div>
 
         <div className={styles.contentSection}>
           <span className={styles.textGray}>Origin</span>
           <Link href="#">
-            <a className={styles.characterLink}> Earth</a>
+            <a className={styles.characterLink}> {character.origin.name}</a>
           </Link>
         </div>
         <div className={styles.contentSection}>
           <span className={styles.textGray}>First Seen in:</span>
           <Link href="#">
-            <a className={styles.characterLink}> Bölüm bir şey</a>
+            <a className={styles.characterLink}> {character.location.name}</a>
           </Link>
         </div>
       </div>
-    </article>
+      </article>
+    ))}
+      
+    </div>
+    </section>
   );
 }
+export default charactercard;
 //Fetch Yapamıyoruk
 
 

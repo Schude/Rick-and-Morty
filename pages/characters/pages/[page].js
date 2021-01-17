@@ -5,13 +5,14 @@ import Search from "../../../components/search";
 import Layout from "../../../components/Layout/layout";
 import Character from "../../../components/charactercard";
 const Page = ({ chars, currentPage }) => {
+  console.log(chars)
   return (
     <div>
       <Layout />
       <Search />
       <Pagination curr={currentPage} />
-      
-      <Card chars={chars} />
+      <Character characters = {chars.results}/>
+      {/* <Card chars={chars} /> */}
     </div>
   );
 };
