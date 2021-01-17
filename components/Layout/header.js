@@ -25,7 +25,7 @@ function Header() {
             </Link>
           </li>
           <li className={styles.items}>
-            <Link href="/contact">
+            <Link href="/contact" as= "/contact">
               <a>Contact</a>
             </Link>
           </li>
