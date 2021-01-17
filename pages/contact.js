@@ -1,31 +1,15 @@
 import Layout from "../components/Layout/layout";
-import styles from "../styles/mainWrapper.module.css";
-import Siluet from "../components/icons/Siluet";
+import Contactform from "../components/contactform";
+import Hero from "../components/hero";
 
 function Contact() {
   return (
-    <div className={styles.mainLayout}>
-      <Layout />
-      <h1 className = {styles.mainTitle}>Contact Me</h1>
-      <section className={styles.mainContainer}>
-      <form className={styles.blabla}>
-        <input placeholder="Full Name" type="text" name="name"></input>
-        <input placeholder="E-Mail" type="text" name="email"></input>
-        <textarea
-          placeholder="Your Message"
-          type="text"
-          name="message"
-        ></textarea>
-        <button type="submit"> Contact </button>
-      </form>
+    <Layout>
+      <h1>Contact Me</h1>
 
-          <div className={styles.mainImage}>
-            <Siluet />
-          </div>
-        </section>
-
-      
-    </div>
+      <Contactform />
+      <Hero />
+    </Layout>
   );
 }
 

@@ -6,14 +6,17 @@ import Charactercard from "../../../components/charactercard";
 import Layout from "../../../components/Layout/layout";
 const searchpage = (chars) => {
   return (
-    <div>
-      <Layout title={`${chars.info[1].search} - Rick and Morty`} />
-      <h1>Search Page</h1>
+    
+    <Layout title={`${chars.info[1].search} - Rick and Morty`}>
+    <h1>Search Page</h1>
       <h2>{chars.results.length} Toplam Sonuç</h2>
       <Search />
 
       <Charactercard characters={chars.results} />
-    </div>
+    </Layout>
+      
+      
+    
   );
 };
 

@@ -1,28 +1,19 @@
 import React from "react";
 import Layout from "../components/Layout/layout";
-import Siluet from "../components/icons/Siluet";
 import styles from "../styles/mainWrapper.module.css";
-import Character from "../components/charactercard";
 import unfetch from "isomorphic-unfetch";
+import Character from "../components/charactercard";
+import Hero from "../components/hero";
 
 const Home = ({ characters }) => {
   return (
-    <div>
-      <Layout title = "Rick and Morty"/>
-
+    <Layout title="Rick and Morty">
       <main className={styles.mainLayout}>
-        <section className={styles.mainContainer}>
-          <h1 className={styles.mainTitle}>Rick and Morty</h1>
-          <h1 className={styles.mainTitle}>Characters</h1>
-
-          <div className={styles.mainImage}>
-            <Siluet />
-          </div>
-        </section>
+        <Hero />
 
         <Character characters={characters} />
       </main>
-    </div>
+    </Layout>
   );
 };
 export default Home;
@@ -37,7 +28,7 @@ export const getStaticProps = async () => {
     );
     const char = await res.json();
     /* charArr.push(char); */
-    charArr = [...charArr, char]
+    charArr = [...charArr, char];
   }
 
   return {
@@ -48,7 +39,7 @@ export const getStaticProps = async () => {
 };
 /**
  
- * Head kısmı
+ * 
  * Search ve pagination dizaynı
  * Footer ?
  * Contact Page

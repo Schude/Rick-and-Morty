@@ -3,7 +3,7 @@
   background-color: #f4a734;
   padding-top: 2px;
 }
-.mainContainer {
+.heroWrapper {
   display: flex;
   -webkit-box-pack: center;
   justify-content: center;

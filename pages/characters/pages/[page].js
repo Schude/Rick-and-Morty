@@ -5,13 +5,10 @@ import Utility from "../../../components/utility";
 
 const Page = ({ chars, currentPage }) => {
   return (
-    <div>
-      <Layout title = {`Rick and Morty - Characters-${currentPage} `} />
-
+    <Layout title={`Rick and Morty - Characters-${currentPage} `}>
       <Utility curr={currentPage} />
-
       <Character characters={chars.results} />
-    </div>
+    </Layout>
   );
 };
 
@@ -20,7 +17,6 @@ export async function getStaticPaths() {
   for (let i = 1; i < 35; i++) {
     paths.push({ params: { page: i.toString() } });
   }
- 
 
   return {
     paths,
@@ -29,7 +25,6 @@ export async function getStaticPaths() {
 }
 
 export const getStaticProps = async ({ params }) => {
-  
   const res = await unfetch(
     `https://rickandmortyapi.com/api/character/?page=${params.page}`
   );
