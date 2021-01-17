@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 import Layout from "../components/Layout/layout";
 import Siluet from "../components/icons/Siluet";
 import styles from "../styles/mainWrapper.module.css";
@@ -7,15 +6,15 @@ import Character from "../components/charactercard";
 import unfetch from "isomorphic-unfetch";
 
 const Home = ({ characters }) => {
-  console.log(characters);
   return (
     <div>
-      <Layout />
+      <Layout title = "Rick and Morty"/>
 
       <main className={styles.mainLayout}>
         <section className={styles.mainContainer}>
           <h1 className={styles.mainTitle}>Rick and Morty</h1>
           <h1 className={styles.mainTitle}>Characters</h1>
+
           <div className={styles.mainImage}>
             <Siluet />
           </div>
@@ -48,7 +47,7 @@ export const getStaticProps = async () => {
 };
 /**
  
- * Karakterler sayfasını düzelticez uzun iş
+ * Head kısmı
  * Search ve pagination dizaynı
  * Footer ?
  * Contact Page

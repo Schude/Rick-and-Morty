@@ -1,27 +1,26 @@
 import unfetch from "isomorphic-unfetch";
-import Pagination from "../../../components/pagination";
-import Card from "../../../components/card";
-import Search from "../../../components/search";
 import Layout from "../../../components/Layout/layout";
 import Character from "../../../components/charactercard";
+import Utility from "../../../components/utility";
+
 const Page = ({ chars, currentPage }) => {
-  console.log(chars)
   return (
     <div>
-      <Layout />
-      <Search />
-      <Pagination curr={currentPage} />
-      <Character characters = {chars.results}/>
-      {/* <Card chars={chars} /> */}
+      <Layout title = {`Character Page ${currentPage}`} />
+
+      <Utility curr={currentPage} />
+
+      <Character characters={chars.results} />
     </div>
   );
 };
 
 export async function getStaticPaths() {
   const paths = [];
-  for (let i = 0; i < 35; i++) {
+  for (let i = 1; i < 35; i++) {
     paths.push({ params: { page: i.toString() } });
   }
+  console.log(paths)
 
   return {
     paths,
@@ -30,6 +29,7 @@ export async function getStaticPaths() {
 }
 
 export const getStaticProps = async ({ params }) => {
+  
   const res = await unfetch(
     `https://rickandmortyapi.com/api/character/?page=${params.page}`
   );

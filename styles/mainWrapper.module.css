@@ -10,7 +10,7 @@
   -webkit-box-align: center;
   align-items: center;
   flex-direction: column;
-  height: calc(50vh - 60px);
+  height: calc(60vh - 60px);
   text-align: center;
   position: relative;
 }
@@ -62,7 +62,7 @@
   justify-content: center;
   -webkit-box-align: center;
   align-items: center;
-  padding: 4.5rem 0px;
+  padding: 2rem 0px;
   background: rgb(36, 40, 47);
   min-height: calc(50vh - 60px);
 }
@@ -74,7 +74,9 @@
   align-items: center;
   flex-wrap: wrap;
   max-width: 1920px;
+  
 }
+
 .characterCard {
   width: 350px;
   height: 400px;
@@ -105,7 +107,7 @@
   opacity: 0;
   flex: 3 1 0%;
   position: absolute;
-  
+
   /* padding: 0 5rem; */
   min-width: 350px;
   max-width: 350px;
@@ -114,7 +116,7 @@
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   display: flex;
-  
+
   flex-direction: column;
   background-color: rgba(22, 20, 20, 0.719);
   transition: 0.2s ease-in-out;
@@ -122,7 +124,7 @@
 .contentSection {
   flex: 5 5 5%;
   display: flex;
-  
+
   flex-direction: column;
   align-items: center;
 }
@@ -131,7 +133,10 @@
   color: rgb(245, 245, 245);
 }
 .contentSection a h2 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+}
+.contentSection a h2:hover {
+  color:#f4a734
 }
 
 .contentSection:first-child {
@@ -143,7 +148,7 @@
   -webkit-box-pack: end;
 }
 .contentSection:not(:last-child) {
-  border-bottom:1.5px solid rgb(212, 137, 50);
+  border-bottom: 1.5px solid rgba(212, 136, 50, 0.63);
 }
 
 .characterStatus {
@@ -164,6 +169,6 @@
 .characterCard:hover .characterContent {
   visibility: visible;
   opacity: 1;
-  
+
   transition-delay: 0.1s;
 }

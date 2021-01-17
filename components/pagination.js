@@ -1,8 +1,8 @@
 import React from "react";
 import Link from "next/Link";
 
-export default function Pagination({ curr, next }) {
-  const CurrentPage = parseInt(curr);
+export default function Pagination({current}) {
+  const CurrentPage = parseInt(current);
   const prevPage = CurrentPage - 1;
   const nextPage = CurrentPage + 1;
   return (

@@ -1,29 +1,31 @@
 import unfetch from "isomorphic-unfetch";
+import Header from "../../components/Layout/header";
+import Layout from "../../components/Layout/layout";
 
 /*
 Burayı Daha detaylı Hala getir
 ilk görüldüğü yeri bölüm sırasından bul aynı şekil last görülen yer
 location için slug oluştur
 */
-const Char = (data) => {
-  console.log(data);
+const Char = (character) => {
   return (
     <div>
+      <Layout title = {character.name} />
       <h1>Rick And Morty</h1>
 
       <br></br>
-      <h2>{data.name} </h2>
+      <h2>{character.name} </h2>
       <figure>
-        <img src={data.image}></img>
+        <img src={character.image} alt = {character.name}></img>
       </figure>
-      <div>Species: {data.species} </div>
-      <div>Status: {data.status} </div>
-      <div>Gender: {data.gender} </div>
-      <div>Origin: {data.origin.name} </div>
+      <div>Species: {character.species} </div>
+      <div>Status: {character.status} </div>
+      <div>Gender: {character.gender} </div>
+      <div>Origin: {character.origin.name} </div>
 
-      <div>Location:{data.location.name} </div>
-      <div>Type:{data.type} </div>
-      <div>Created:{data.created} </div>
+      <div>Location:{character.location.name} </div>
+      <div>Type:{character.type} </div>
+      <div>Created:{character.created} </div>
     </div>
   );
 };
@@ -31,13 +33,8 @@ const Char = (data) => {
 Char.getInitialProps = async ({ query }) => {
   const id = query.slug.split("-").slice(-1);
   const res = await unfetch(`https://rickandmortyapi.com/api/character/${id}`);
-  const data = await res.json();
-  return data;
-  /* return {
-    props: {
-      data,
-    },
-  }; */
+  const character = await res.json();
+  return character;
 };
 
 export default Char;
