@@ -7,7 +7,7 @@ import Layout from "../../../components/Layout/layout";
 const searchpage = (chars) => {
   return (
     <div>
-      <Layout />
+      <Layout title={`${chars.info[1].search} - Rick and Morty`} />
       <h1>Search Page</h1>
       <h2>{chars.results.length} Toplam Sonuç</h2>
       <Search />
@@ -18,23 +18,21 @@ const searchpage = (chars) => {
 };
 
 searchpage.getInitialProps = async ({ query }) => {
-  let res1 = await unfetch(
+  let res = await unfetch(
     `https://rickandmortyapi.com/api/character/?page=${1}&name=${query.search}`
   );
-  let data1 = await res1.json();
-  const numOfPages = data1.info.pages;
-  let datax = data1.results;
+  let data = await res.json();
+  const numOfPages = data.info.pages;
   for (let i = 2; i < numOfPages + 1; i++) {
-    let res = await unfetch(
+    let tempRes = await unfetch(
       `https://rickandmortyapi.com/api/character/?page=${i}&name=${query.search}`
     );
-    let data = await res.json();
-    datax = _.concat(datax, data.results);
+    let tempData = await tempRes.json();
+    data.results = _.concat(data.results, tempData.results);
   }
+  data.info = _.concat(data.info, query);
 
-  data1.results = datax;
-
-  return data1;
+  return data;
 };
 
 export default searchpage;

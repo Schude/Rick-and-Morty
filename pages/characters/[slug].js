@@ -1,5 +1,4 @@
 import unfetch from "isomorphic-unfetch";
-import Header from "../../components/Layout/header";
 import Layout from "../../components/Layout/layout";
 
 /*

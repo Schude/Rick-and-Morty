@@ -6,7 +6,7 @@ import Utility from "../../../components/utility";
 const Page = ({ chars, currentPage }) => {
   return (
     <div>
-      <Layout title = {`Character Page ${currentPage}`} />
+      <Layout title = {`Rick and Morty - Characters-${currentPage} `} />
 
       <Utility curr={currentPage} />
 
@@ -20,7 +20,7 @@ export async function getStaticPaths() {
   for (let i = 1; i < 35; i++) {
     paths.push({ params: { page: i.toString() } });
   }
-  console.log(paths)
+ 
 
   return {
     paths,

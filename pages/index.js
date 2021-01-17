@@ -29,14 +29,15 @@ export default Home;
 
 export const getStaticProps = async () => {
   //Duplicate Check et
-  const charArr = [];
+  let charArr = [];
   for (let i = 0; i < 5; i++) {
     const id = Math.floor(Math.random() * 671);
     const res = await unfetch(
       `https://rickandmortyapi.com/api/character/${id}`
     );
     const char = await res.json();
-    charArr.push(char);
+    /* charArr.push(char); */
+    charArr = [...charArr, char]
   }
 
   return {

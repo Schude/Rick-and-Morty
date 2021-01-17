@@ -10,7 +10,7 @@ const Search = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    router.push("/search/[search]", `/search/${query}`);
+    router.push("/characters/search-results/[search]", `/characters/search-results/${query}`);
   };
 
   return (
