@@ -1,23 +1,44 @@
 import React from "react";
 
-export default function Characterdetail({character}) {
+import styles from "../styles/characterDetail.module.css";
+
+export default function Characterdetail({ character }) {
+  
+  /**
+   * Origin.url alıcaz oradan
+   *
+   *
+   */
   return (
-    <div>
-      <h1>Rick And Morty</h1>
+    <section className={styles.characterLayout}>
+      <div className={styles.characterContainer}>
+        <div className={styles.characterImage}>
+          <img
+            className={styles.image}
+            src={character.image}
+            alt={character.name}
+          ></img>
+        </div>
 
-      <br></br>
-      <h2>{character.name} </h2>
-      <figure>
-        <img src={character.image} alt={character.name}></img>
-      </figure>
-      <div>Species: {character.species} </div>
-      <div>Status: {character.status} </div>
-      <div>Gender: {character.gender} </div>
-      <div>Origin: {character.origin.name} </div>
+        <div className={styles.detailContent}>
+          <div className={styles.detailSection}>
+            <h2>{character.name} </h2> {/* characterName  */}
+            <span>Status: {character.status} </span>
+            <span>Species: {character.species} </span>
+            <span>Type:{character.type} </span>
+            <span>Gender: {character.gender} </span>
+            <span>Created:{character.created} </span>
+          </div>
 
-      <div>Location:{character.location.name} </div>
-      <div>Type:{character.type} </div>
-      <div>Created:{character.created} </div>
-    </div>
+          <div className={styles.detailSection}>
+            <span>Origin: {character.origin.name} </span>
+            {/*  Fetchden buraya Dimension
+              Buraya Type Gelecek */}
+            <span>Last Seen in:{character.location.name} </span>
+            <span>Created:{character.created} </span>
+          </div>
+        </div>
+      </div>
+    </section>  
   );
 }

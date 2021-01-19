@@ -7,7 +7,7 @@ import Hero from "../components/hero";
 const Home = ({ characters }) => {
   return (
     <Layout title="Rick and Morty">
-      <Hero />
+      <Hero/>
       <Character characters={characters} />
     </Layout>
   );
@@ -39,6 +39,4 @@ export const getStaticProps = async () => {
  * Homepage "Viel all Character ??"
  * Character Detail Sayfası
  * Locationslar
- * 
-
  */

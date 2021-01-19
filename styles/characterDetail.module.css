@@ -1,0 +1,15 @@
+.characterLayout{
+    margin: 0 auto;
+    width: 80%;
+    background-color: rgba(46, 43, 43, 0.699);
+}
+.detailContent{
+    background-color: rgba(0, 255, 255, 0.459);
+}
+.detailSection{
+    background-color: rgba(0, 255, 13, 0.459);
+}
+.characterLayout span {
+
+    background-color: rgba(255, 0, 55, 0.459);
+}

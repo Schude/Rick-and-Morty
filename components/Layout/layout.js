@@ -1,9 +1,10 @@
+import React from "react";
 import Header from "./header";
-import styles from "../../styles/wrapper.module.css";
 import Head from "next/head";
+
 function Layout({ children, title }) {
   return (
-    <div className={styles.wrapper}>
+    <div>
       <Head>
         <title>{title}</title>
         <meta name="author" content="Serkan"></meta>

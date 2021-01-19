@@ -11,11 +11,13 @@ const Char = (character) => {
   return (
     <Layout title={character.name}>
       <Characterdetail character = {character}/>
+      
     </Layout>
   );
 };
 
 Char.getInitialProps = async ({ query }) => {
+  //originide buradan yollayacaaaaazzzz
   const id = query.slug.split("-").slice(-1);
   const res = await unfetch(`https://rickandmortyapi.com/api/character/${id}`);
   const character = await res.json();
