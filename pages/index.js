@@ -1,18 +1,14 @@
 import React from "react";
-import Layout from "../components/Layout/layout";
-import styles from "../styles/mainWrapper.module.css";
 import unfetch from "isomorphic-unfetch";
+import Layout from "../components/Layout/layout";
 import Character from "../components/charactercard";
 import Hero from "../components/hero";
 
 const Home = ({ characters }) => {
   return (
     <Layout title="Rick and Morty">
-      <main className={styles.mainLayout}>
-        <Hero />
-
-        <Character characters={characters} />
-      </main>
+      <Hero />
+      <Character characters={characters} />
     </Layout>
   );
 };
@@ -27,10 +23,8 @@ export const getStaticProps = async () => {
       `https://rickandmortyapi.com/api/character/${id}`
     );
     const char = await res.json();
-    /* charArr.push(char); */
     charArr = [...charArr, char];
   }
-
   return {
     props: {
       characters: charArr,
@@ -38,8 +32,6 @@ export const getStaticProps = async () => {
   };
 };
 /**
- 
- * 
  * Search ve pagination dizaynı
  * Footer ?
  * Contact Page

@@ -1,4 +1,9 @@
-.mainLayout{
+.wrapper {
+    display: block;
+    background-color: #f4a734;
+    padding-top: 2px;
+  }
+  .mainLayout{
     font-variant-ligatures: none;
     text-rendering: optimizelegibility;
     -webkit-font-smoothing: antialiased;

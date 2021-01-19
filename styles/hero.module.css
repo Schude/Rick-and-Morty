@@ -1,8 +1,3 @@
-.mainLayout {
-  display: block;
-  background-color: #f4a734;
-  padding-top: 2px;
-}
 .heroWrapper {
   display: flex;
   -webkit-box-pack: center;
@@ -19,10 +14,7 @@
   font-size: 5.625rem;
   display: block;
   line-height: 1.1;
-  padding-bottom: calc(0.40625rem - 1px);
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
+  padding:0 0 calc(0.40625rem - 1px) 0;
   margin: 0px;
   color: rgb(32, 35, 41);
   border: none;

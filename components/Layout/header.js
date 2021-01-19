@@ -1,6 +1,6 @@
 import Link from "next/Link";
 import SvgRickMorty from "../icons/RickMorty";
-import styles from "../../styles/navbar.module.css";
+import styles from "../../styles/header.module.css";
 
 function Header() {
   return (

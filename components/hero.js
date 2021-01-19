@@ -1,6 +1,6 @@
 import React from 'react'
 import Siluet from "../components/icons/Siluet";
-import styles from "../styles/mainWrapper.module.css";
+import styles from "../styles/hero.module.css";
 export default function Hero() {
     return (
         <section className={styles.heroWrapper}>
