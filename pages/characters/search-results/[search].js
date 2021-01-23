@@ -19,7 +19,7 @@ const searchpage = (chars) => {
     
   );
 };
-
+//Statiac propsa çevir
 searchpage.getInitialProps = async ({ query }) => {
   let res = await unfetch(
     `https://rickandmortyapi.com/api/character/?page=${1}&name=${query.search}`

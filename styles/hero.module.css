@@ -8,6 +8,7 @@
   height: calc(70vh - 60px);
   text-align: center;
   position: relative;
+  background-color: #F4A734;
 }
 .mainTitle {
   text-align: center;
@@ -25,19 +26,7 @@
   margin-inline-end: 0px;
   word-wrap: break-word;
 }
-@media (max-width: 40.625em) {
-  .mainTitle {
-    font-size: 3.125rem;
-  }
-}
-.blabla {
-  z-index: 5;
-}
-@media (max-width: 55.625em) {
-  .mainTitle {
-    font-size: 3.75rem;
-  }
-}
+
 .mainImage {
   position: absolute;
   width: 100%;
@@ -49,4 +38,15 @@
 }
 .mainImage svg:not(:root) {
   overflow: hidden;
+}
+@media (max-width: 40.625em) {
+  .mainTitle {
+    font-size: 3.125rem;
+  }
+}
+
+@media (max-width: 55.625em) {
+  .mainTitle {
+    font-size: 3.75rem;
+  }
 }

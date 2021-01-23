@@ -3,7 +3,6 @@ import React from "react";
 import styles from "../styles/characterDetail.module.css";
 
 export default function Characterdetail({ character }) {
-  
   /**
    * Origin.url alıcaz oradan
    *
@@ -22,23 +21,25 @@ export default function Characterdetail({ character }) {
 
         <div className={styles.detailContent}>
           <div className={styles.detailSection}>
-            <h2>{character.name} </h2> {/* characterName  */}
+            <h2 className={styles.characterName}>{character.name}</h2>{" "}
             <span>Status: {character.status} </span>
             <span>Species: {character.species} </span>
-            <span>Type:{character.type} </span>
+            <span>
+              Type: {character.type ? `${character.type}` : "Unknown"}{" "}
+            </span>
             <span>Gender: {character.gender} </span>
-            <span>Created:{character.created} </span>
+            <span>Created: {character.created} </span>
           </div>
 
-          <div className={styles.detailSection}>
+          {/* <div className={styles.detailSection}>
             <span>Origin: {character.origin.name} </span>
-            {/*  Fetchden buraya Dimension
-              Buraya Type Gelecek */}
+            <span>Dimension BlaBla</span>
+            <span>Type : BlaBla Bla</span>
             <span>Last Seen in:{character.location.name} </span>
             <span>Created:{character.created} </span>
-          </div>
+          </div> */}
         </div>
       </div>
-    </section>  
+    </section>
   );
 }
