@@ -1,7 +1,7 @@
 import unfetch from "isomorphic-unfetch";
 import Layout from "../../components/Layout/layout";
 import Characterdetail from "../../components/characterdetail";
-
+import Utility from "../../components/utility"
 /*
 Burayı Daha detaylı Hala getir
 ilk görüldüğü yeri bölüm sırasından bul aynı şekil last görülen yer
@@ -11,6 +11,7 @@ const Char = (character) => {
   console.log(typeof character);
   return (
     <Layout title={character.name}>
+    <Utility />
       <Characterdetail character={character} />
     </Layout>
   );

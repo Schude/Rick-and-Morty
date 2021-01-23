@@ -30,15 +30,26 @@ export default function Characterdetail({ character }) {
             <span>Gender: {character.gender} </span>
             <span>Created: {character.created} </span>
           </div>
-
-          {/*  */}
         </div>
+
         <div className={styles.deneme}>
           <span>Origin: {character.origin.name} </span>
           <span>Dimension BlaBla</span>
           <span>Type : BlaBla Bla</span>
           <span>Last Seen in:{character.location.name} </span>
           <span>Created:{character.created} </span>
+        </div>
+
+        <div className={styles.residents}>
+          <h2 className={styles.characterName}>
+            Residents of {character.origin.name}
+          </h2>
+          <div classnames={styles.icons}>
+            <span>asda</span>
+            <span>asda</span>
+            <span>asda</span>
+            <span>asda</span>
+          </div>
         </div>
       </div>
     </section>

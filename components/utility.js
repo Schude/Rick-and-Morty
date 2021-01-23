@@ -2,7 +2,7 @@ import React from 'react'
 import Search from './search'
 import Pagination from './pagination'
 
-const utility = ({curr}) => {
+const Utility = ({curr}) => {
 
 
     return (
@@ -14,4 +14,4 @@ const utility = ({curr}) => {
 }
 
 
-export default utility;
+export default Utility;

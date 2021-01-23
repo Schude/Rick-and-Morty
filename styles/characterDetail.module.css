@@ -1,37 +1,42 @@
 .characterLayout {
-  min-height: calc(100vh - 60px);
-  /* min-width: calc(100vh -50px); */
+  min-height: calc(88vh);
+
   background-image: url("../public/image\ 1bg.png");
   background-repeat: no-repeat;
   background-size: cover;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: center;
 }
 .characterContainer {
   background: rgba(40, 45, 54, 0.842);
   margin: 0 auto;
   width: 60%;
-  padding: 2rem 0px;
+  padding: 2rem 0;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  
-  justify-content: space-around;
-  align-content: space-around;
+  justify-content: space-evenly;
+  align-content: center;
   color: rgb(255, 255, 255);
 }
+
+.characterImage {
+  height: 300px;
+  
+}
 .characterImage img {
-  border-radius: 0.5rem;
+    border-radius: 0.5rem;
 }
 
 .detailContent {
   color: rgb(255, 255, 255);
   border-radius: 0.5rem;
-
   background-color: rgba(192, 64, 64, 0.863);
-  display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: space-around;
-  align-content: space-around;
+  align-content: center;
 }
 .detailContent span {
   font-size: 1.1rem;
@@ -39,28 +44,42 @@
   letter-spacing: 3px;
 }
 .detailSection {
-  padding: 0 5rem;
+  padding: 0 2rem;
   display: flex;
   flex-direction: column;
-  
 }
-.deneme{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    padding: 0 3rem;
-    width:80%;
-    max-width: 90%;
-    
-    margin-top:2rem;
-    align-content: flex-start;
-    background-color: rgba(64, 192, 175, 0.863);
-    border-radius: 0.5rem;
+
+.deneme {
+  padding: 0 1rem;
+  margin-top: 1.5rem;
+  max-width: 590px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  background-color: rgba(64, 192, 175, 0.863);
+  border-radius: 0.5rem;
 }
-.deneme span{
-font-size: 1.1rem;
+.deneme span {
+  font-size: 1.1rem;
   font-weight: 500;
   letter-spacing: 3px;
+}
+.residents {
+  padding: 0 1rem;
+  max-width: 480px;
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: rgba(177, 64, 192, 0.863);
+  border-radius: 0.5rem;
+}
+
+.residents .icons {
+  display: flex;
+  flex-direction: row;
 }
 
 .characterName {
@@ -75,10 +94,16 @@ font-size: 1.1rem;
   .characterContainer {
     width: 100%;
   }
+  .detailContent {
+    margin-top: 1.5rem;
+  }
 }
 
 @media (max-width: 55.625em) {
   .characterContainer {
     width: 100%;
+  }
+  .detailContent {
+    margin-top: 1.5rem;
   }
 }
