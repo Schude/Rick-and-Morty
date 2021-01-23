@@ -13,8 +13,10 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+  
   justify-content: space-around;
   align-content: space-around;
+  color: rgb(255, 255, 255);
 }
 .characterImage img {
   border-radius: 0.5rem;
@@ -23,7 +25,13 @@
 .detailContent {
   color: rgb(255, 255, 255);
   border-radius: 0.5rem;
+
   background-color: rgba(192, 64, 64, 0.863);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: space-around;
 }
 .detailContent span {
   font-size: 1.1rem;
@@ -34,6 +42,25 @@
   padding: 0 5rem;
   display: flex;
   flex-direction: column;
+  
+}
+.deneme{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 0 3rem;
+    width:80%;
+    max-width: 90%;
+    
+    margin-top:2rem;
+    align-content: flex-start;
+    background-color: rgba(64, 192, 175, 0.863);
+    border-radius: 0.5rem;
+}
+.deneme span{
+font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 3px;
 }
 
 .characterName {
