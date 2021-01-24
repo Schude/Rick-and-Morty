@@ -6,7 +6,7 @@ function Header() {
   return (
     <header className={styles.headerWrapper}>
       <nav className={styles.navbar}>
-        <Link href="/" >  
+        <Link href="/">
           <a className={styles.homePage}>
             <SvgRickMorty />{" "}
           </a>
@@ -20,12 +20,9 @@ function Header() {
             >
               <a>Characters</a>
             </Link>
-            <Link href="/about">
-              <a>About</a>
-            </Link>
           </li>
           <li className={styles.items}>
-            <Link href="/contact" as= "/contact">
+            <Link href="/contact" as="/contact">
               <a>Contact</a>
             </Link>
           </li>

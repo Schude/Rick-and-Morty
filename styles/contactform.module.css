@@ -1,0 +1,83 @@
+.contactSection {
+  background-color: rgba(19, 17, 17, 0.418);
+  min-height: calc(100vh - 60px);
+  background-image: url("../public/contact-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.contactSection h1 {
+  color:  #f4a734;
+  padding: 1.2rem 0;
+  text-align: center;
+  letter-spacing: 3px;
+}
+
+.contactForm {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2.5rem;
+  background-color: rgb(44, 42, 53);
+  padding: 1rem 0;
+}
+.formInput {
+  font-size: 0.9rem;
+  display: block;
+  width: 60%;
+  margin: 0.8rem auto;
+  background-color: #3e4147;
+  border: none;
+  padding: 1rem 2rem;
+  outline: none;
+  color: rgb(255, 255, 255);
+  transition: 0.5s;
+}
+.formInput::placeholder {
+  color: rgb(201, 194, 194);
+  font-style: italic;
+  letter-spacing: 2px;
+}
+.formInput:focus {
+  box-shadow: 0 0 4px 0.2px #f4a734;
+}
+.formArea {
+  font-size: 0.9rem;
+  color: #f4a734;
+  display: block;
+  width: 60%;
+  margin: 1.2rem auto;
+  background-color: #3e4147;
+  border: none;
+  padding: 1rem 2rem;
+  outline: none;
+  color: rgb(255, 255, 255);
+  transition: 0.3s;
+  height: 200px;
+
+  resize: none;
+}
+.formArea:focus {
+  box-shadow: 0 0 4px 0.2px #f4a734;
+}
+.formArea::placeholder {
+  font-style: italic;
+
+  color: rgb(201, 194, 194);
+  letter-spacing: 2px;
+}
+
+.submitBtn {
+  width: 60%;
+  padding: 0.8rem;
+  margin: 0 auto;
+  background-color: peru;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: rgb(44, 42, 53);
+  cursor: pointer;
+}

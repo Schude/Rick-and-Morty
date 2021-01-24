@@ -15,7 +15,7 @@ export default function Pagebutton({ current, text, value }) {
       className={styles.pageButton}
       style={
         target === 0 || target === 35 || value === "disabled"
-          ? { visibility: "hidden" }
+          ? { display: "none" }
           : {}
       }
     >

@@ -40,17 +40,6 @@ export default function Characterdetail({ character }) {
           <span>Created:{character.created} </span>
         </div>
 
-        <div className={styles.residents}>
-          <h2 className={styles.characterName}>
-            Residents of {character.origin.name}
-          </h2>
-          <div classnames={styles.icons}>
-            <span>asda</span>
-            <span>asda</span>
-            <span>asda</span>
-            <span>asda</span>
-          </div>
-        </div>
       </div>
     </section>
   );
