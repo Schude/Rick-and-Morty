@@ -47,3 +47,20 @@
 .searchButton:focus {
   outline: none;
 }
+@media (max-width: 40.625em) {
+  .searchInput {
+    width: 10rem;
+  }
+  .searchButton {
+    margin-top: 3px;
+  }
+}
+
+@media (max-width: 55.625em) {
+  .searchInput {
+    width: 10rem;
+  }
+  .searchButton {
+    margin-top: 3px;
+  }
+}

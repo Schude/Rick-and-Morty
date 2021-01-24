@@ -1,12 +1,12 @@
 import unfetch from "isomorphic-unfetch";
-import Pagination from "../../../components/rick-and-morty/pagination";
+import Utility from "../../../components/rick-and-morty/Utility";
 
 const Page = ({ locations, currentPage }) => {
   console.log(locations);
   return (
     <div>
       <h1>Rick And Morty</h1>
-      <Pagination curr={currentPage} />
+      <Utility curr={currentPage} />
 
       <div>
         {locations.results.map((location) => (

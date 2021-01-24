@@ -1,18 +1,29 @@
-.pageButton{
-    border:none;
-    width: 8rem;
-    height:36px;
-    
-    background-color:peru;
-    font-size: 1.1rem;
-    color: #202329;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 6px;
+.pageButton {
+  border: none;
+  width: 8rem;
+  height: 36px;
+
+  background-color: peru;
+  font-size: 1.1rem;
+  color: #202329;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 6px;
 }
-.pageButton a { 
-    text-align: center;
-    text-decoration: none;
-    color: #202329;
-    font-weight:600
+.pageButton a {
+  text-align: center;
+  text-decoration: none;
+  color: #202329;
+  font-weight: 600;
+}
+@media (max-width: 40.625em) {
+  .pageButton a {
+    width: 5rem;
+  }
+}
+
+@media (max-width: 55.625em) {
+  .pageButton a {
+    width: 5rem;
+  }
 }

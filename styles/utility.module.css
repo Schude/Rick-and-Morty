@@ -9,10 +9,16 @@
   .searchInput {
     width: 10rem;
   }
+  .utilityContainer {
+    padding-bottom: 0.5rem;
+  }
 }
 
 @media (max-width: 55.625em) {
   .searchInput {
     width: 10rem;
+  }
+  .utilityContainer {
+    padding-bottom: 0.5rem;
   }
 }

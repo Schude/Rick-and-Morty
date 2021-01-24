@@ -32,7 +32,7 @@ export const getStaticProps = async () => {
   };
 };
 /**
- * Search ve pagination dizaynı
+ 
  * Footer ?
  * Contact Page
  * About Page
