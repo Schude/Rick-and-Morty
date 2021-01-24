@@ -30,7 +30,6 @@ export const getStaticProps = async ({ params }) => {
   );
   const chars = await res.json();
   const currentPage = params.page;
-
   return {
     props: {
       chars,

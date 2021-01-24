@@ -24,10 +24,9 @@
 
 .characterImage {
   height: 300px;
-  
 }
 .characterImage img {
-    border-radius: 0.5rem;
+  border-radius: 0.5rem;
 }
 
 .detailContent {
@@ -53,6 +52,7 @@
   padding: 0 1rem;
   margin-top: 1.5rem;
   max-width: 590px;
+
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -67,7 +67,7 @@
   letter-spacing: 3px;
 }
 .residents {
-  padding: 0 1rem;
+  padding: 0 1.5rem;
   max-width: 480px;
   margin-top: 1.5rem;
   display: flex;

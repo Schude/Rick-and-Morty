@@ -37,6 +37,5 @@ export const getStaticProps = async () => {
  * Contact Page
  * About Page
  * Homepage "Viel all Character ??"
- * Character Detail Sayfası
  * Locationslar
  */

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useRouter } from "next/router";
+import styles from '../styles/search.module.css'
 const Search = () => {
   const [query, setQuery] = useState("");
   const router = useRouter();
@@ -14,16 +15,18 @@ const Search = () => {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
+    <div className={styles.searchContainer}>
+      <form className={styles.searchForm} onSubmit={handleSubmit}>
         <input
+        className={styles.searchInput}
           onChange={handleChange}
           value={query}
           name="value"
           type="text"
           placeholder="Search..."
+          onfocus="this.placeholder = ''"
         ></input>
-        <button type="submit">Search</button>
+        <button className={styles.searchButton} type="submit">Search</button>
       </form>
     </div>
   );
