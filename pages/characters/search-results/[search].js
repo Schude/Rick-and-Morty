@@ -1,22 +1,15 @@
 import unfetch from "isomorphic-unfetch";
 import React from "react";
-import Search from "../../../components/search";
+import Utility from "../../../components/utility";
 import _ from "lodash";
 import Charactercard from "../../../components/charactercard";
 import Layout from "../../../components/Layout/layout";
 const searchpage = (chars) => {
   return (
-    
     <Layout title={`${chars.info[1].search} - Rick and Morty`}>
-    <h1>Search Page</h1>
-      <h2>{chars.results.length} Toplam Sonuç</h2>
-      <Search />
-
+      <Utility value="disabled" />
       <Charactercard characters={chars.results} />
     </Layout>
-      
-      
-    
   );
 };
 //Statiac propsa çevir

@@ -2,7 +2,6 @@ import unfetch from "isomorphic-unfetch";
 import Layout from "../../../components/Layout/layout";
 import Character from "../../../components/charactercard";
 import Utility from "../../../components/utility";
-
 const Page = ({ chars, currentPage }) => {
   return (
     <Layout title={`Rick and Morty - Characters-${currentPage} `}>

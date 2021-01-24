@@ -5,7 +5,7 @@ import Utility from "../../components/utility";
 const Char = (character) => {
   return (
     <Layout title={character.name}>
-      <Utility />
+      <Utility text="disable" />
 
       <Characterdetail character={character} />
     </Layout>

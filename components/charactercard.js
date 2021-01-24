@@ -3,9 +3,13 @@ import Link from "next/Link";
 import slug from "slug";
 import styles from "../styles/cards.module.css";
 
+
 const charactercard = ({ characters }) => {
   return (
+    
     <section className={styles.cardsLayout}>
+        
+    
       <div className={styles.cardsContainer}>
         {characters &&
           characters.map((character) => (
