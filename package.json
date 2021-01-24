@@ -9,11 +9,13 @@
     "icon": "svgr icon/* -d components/icons --icon"
   },
   "dependencies": {
+    "firebase": "^8.2.4",
     "isomorphic-unfetch": "^3.1.0",
     "lodash": "^4.17.20",
     "next": "10.0.4",
     "react": "17.0.1",
     "react-dom": "17.0.1",
+    "react-hook-form": "^6.14.2",
     "sass": "^1.30.0",
     "shortid": "^2.2.16",
     "slug": "^4.0.2"
