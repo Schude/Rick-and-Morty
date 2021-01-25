@@ -17,7 +17,7 @@ export default Char;
 
 export async function getStaticPaths() {
   const paths = [];
-  for (let i = 1; i < 672; i++) {
+  for (let i = 1; i < 21; i++) {
     const res = await unfetch(`https://rickandmortyapi.com/api/character/${i}`);
     const character = await res.json();
 
