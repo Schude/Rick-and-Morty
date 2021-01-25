@@ -23,7 +23,17 @@ export default Char;
 //   return character;
 // };
 
-export async function getStaticPaths() {
+
+/*Char.getInitialProps = async ({ query }) => {
+  //originide buradan yollayacaaaaazzzz
+  const id = query.slug.split("-").slice(-1);
+  const res = await unfetch(`https://rickandmortyapi.com/api/character/${id}`);
+  const character = await res.json();
+
+  return character;
+};*/
+
+ export async function getStaticPaths() {
   const paths = [];
   for (let i = 1; i < 672; i++) {
     const res = await unfetch(`https://rickandmortyapi.com/api/character/${i}`);
@@ -49,3 +59,4 @@ export const getStaticProps = async ({ params }) => {
     },
   };
 };
+
