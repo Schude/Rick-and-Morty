@@ -1,4 +1,4 @@
-import Link from "next/Link";
+import Link from "next/link";
 import SvgRickMorty from "../icons/RickMorty";
 import styles from "../../styles/header.module.css";
 

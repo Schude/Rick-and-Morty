@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "next/Link";
+import Link from "next/link";
 import slug from "slug";
 import styles from "../styles/cards.module.css";
 
