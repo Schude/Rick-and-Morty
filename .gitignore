@@ -8,6 +8,10 @@
 # testing
 /coverage
 
+next
+
+#icons
+/.icon/
 # next.js
 /.next/
 /out/

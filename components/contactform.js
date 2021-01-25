@@ -5,6 +5,7 @@ import styles from "../styles/contactform.module.css";
 
 export default function Contactform() {
   const [data, setData] = useState({
+    id: 1,
     name: "",
     email: "",
     subject: "",
@@ -24,6 +25,7 @@ export default function Contactform() {
     database
       .collection("contacts")
       .add({
+        id:data.id,
         name: data.name,
         email: data.email,
         subject: data.subject,
@@ -36,6 +38,7 @@ export default function Contactform() {
         alert("Error adding document: ", error);
       });
     setData(() => ({
+      id: data.id+1,
       name: "",
       email: "",
       subject: "",
