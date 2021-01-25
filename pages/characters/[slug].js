@@ -2,8 +2,8 @@ import unfetch from "isomorphic-unfetch";
 import Layout from "../../components/Layout/layout";
 import Characterdetail from "../../components/characterdetail";
 import Utility from "../../components/utility";
-import slug from 'slug'
-const Char = ({character}) => {
+import slug from "slug";
+const Char = ({ character }) => {
   return (
     <Layout title={character.name}>
       <Utility value="disabled" />
@@ -23,7 +23,6 @@ export default Char;
 //   return character;
 // };
 
-
 /*Char.getInitialProps = async ({ query }) => {
   //originide buradan yollayacaaaaazzzz
   const id = query.slug.split("-").slice(-1);
@@ -33,7 +32,7 @@ export default Char;
   return character;
 };*/
 
- export async function getStaticPaths() {
+export async function getStaticPaths() {
   const paths = [];
   for (let i = 1; i < 672; i++) {
     const res = await unfetch(`https://rickandmortyapi.com/api/character/${i}`);
@@ -55,8 +54,7 @@ export const getStaticProps = async ({ params }) => {
 
   return {
     props: {
-      character
+      character,
     },
   };
 };
-

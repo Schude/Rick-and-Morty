@@ -7,6 +7,7 @@ import Hero from "../components/hero";
 const Home = ({ characters }) => {
   return (
     <Layout title="Rick and Morty">
+    <h1>Deploy</h1>
       <Hero/>
       <Character characters={characters} />
     </Layout>
