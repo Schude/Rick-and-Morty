@@ -3,7 +3,7 @@ import Layout from "../../components/Layout/layout";
 import Characterdetail from "../../components/characterdetail";
 import Utility from "../../components/utility";
 import slug from 'slug'
-const Char = (character) => {
+const Char = ({character}) => {
   return (
     <Layout title={character.name}>
       <Utility value="disabled" />
@@ -14,22 +14,22 @@ const Char = (character) => {
 };
 
 export default Char;
-Char.getInitialProps = async ({ query }) => {
-  //originide buradan yollayacaaaaazzzz
-  const id = query.slug.split("-").slice(-1);
-  const res = await unfetch(`https://rickandmortyapi.com/api/character/${id}`);
-  const character = await res.json();
+// Char.getInitialProps = async ({ query }) => {
+//   //originide buradan yollayacaaaaazzzz
+//   const id = query.slug.split("-").slice(-1);
+//   const res = await unfetch(`https://rickandmortyapi.com/api/character/${id}`);
+//   const character = await res.json();
 
-  return character;
-};
+//   return character;
+// };
 
-/* export async function getStaticPaths() {
+export async function getStaticPaths() {
   const paths = [];
-  for (let i = 1; i < 647; i++) {
+  for (let i = 1; i < 672; i++) {
     const res = await unfetch(`https://rickandmortyapi.com/api/character/${i}`);
-    const deneme = await res.json();
+    const character = await res.json();
 
-    paths.push({ params: { slug: `${slug(deneme.name)}-${deneme.id}` } });
+    paths.push({ params: { slug: `${slug(character.name)}-${character.id}` } });
   }
 
   return {
@@ -48,4 +48,4 @@ export const getStaticProps = async ({ params }) => {
       character
     },
   };
-}; */
+};
