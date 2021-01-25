@@ -4,7 +4,7 @@ import Character from "../../../components/charactercard";
 import Utility from "../../../components/utility";
 const Page = ({ chars, currentPage }) => {
   return (
-    <Layout title={`Rick and Morty - Characters-${currentPage} `}>
+    <Layout title={`Rick and Morty - Characters - ${currentPage} `}>
       <Utility curr={currentPage} />
       <Character characters={chars.results} />
     </Layout>

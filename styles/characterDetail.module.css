@@ -1,5 +1,5 @@
 .characterLayout {
-  min-height: calc(88vh);
+  min-height: calc(89vh);
   background-image: url("../public/image\ 1bg.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -9,100 +9,111 @@
   align-content: center;
 }
 .characterContainer {
-  background: rgba(40, 45, 54, 0.842);
+  background: rgba(19, 21, 26, 0.89);
   margin: 0 auto;
   width: 60%;
-  padding: 2rem 0;
+  padding: 3rem 0;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-evenly;
   align-content: center;
   color: rgb(255, 255, 255);
+  border-radius: 0.5rem;
 }
 
 .characterImage {
-  height: 300px;
+  height: 500px;
 }
 .characterImage img {
+  height: 500px;
   border-radius: 0.5rem;
 }
 
-.detailContent {
+.characterContent {
   color: rgb(255, 255, 255);
   border-radius: 0.5rem;
-  background-color: rgba(192, 64, 64, 0.863);
-  flex-wrap: wrap;
-  flex-direction: row;
-  align-content: center;
-}
-.detailContent span {
-  font-size: 1.1rem;
-  font-weight: 500;
-  letter-spacing: 3px;
-}
-.detailSection {
+  display: flex;
   padding: 0 2rem;
-  display: flex;
-  flex-direction: column;
-}
-
-.deneme {
-  padding: 0 1rem;
-  margin-top: 1.5rem;
-  max-width: 590px;
-
-  display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
-  justify-content: space-around;
-
-  background-color: rgba(64, 192, 175, 0.863);
-  border-radius: 0.5rem;
-}
-.deneme span {
-  font-size: 1.1rem;
-  font-weight: 500;
-  letter-spacing: 3px;
-}
-.residents {
-  padding: 0 1.5rem;
-  max-width: 480px;
-  margin-top: 1.5rem;
-  display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  background-color: rgba(177, 64, 192, 0.863);
-  border-radius: 0.5rem;
+  align-content: center;
+  background-color: rgb(170, 59, 59);
 }
 
-.residents .icons {
+.textGray {
+  color: rgba(40, 45, 54, 0.842);
+}
+.characterContent span {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+.contentSection {
+  flex: 5 5 5%;
   display: flex;
-  flex-direction: row;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.contentSection h2 {
+  font-size: 2rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+.contentSection:not(:last-child) {
+  border-bottom: 2.5px solid rgba(8, 5, 1, 0.63);
 }
 
-.characterName {
-  text-align: center;
-  border-bottom: 1.5px solid rgba(212, 136, 50, 0.63);
+.contentText{
+  color: rgb(248, 242, 212);
 }
 
-.detailSection:not(:last-child) {
-  border-bottom: 1.5px solid rgba(212, 136, 50, 0.63);
-}
 @media (max-width: 40.625em) {
   .characterContainer {
     width: 100%;
   }
-  .detailContent {
-    margin-top: 1.5rem;
+  .contentSection h2 {
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 600;
   }
+  .characterContent {
+    margin-top: 1.4rem;
+  }
+  .characterImage {
+    height: 300px;
+  }
+  .characterImage img {
+    height: 300px;
+  }
+  .characterContent span {
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+
 }
 
 @media (max-width: 55.625em) {
   .characterContainer {
     width: 100%;
   }
-  .detailContent {
+  .characterContent span {
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  .contentSection h2 {
+    text-align: center;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+  }
+  .characterContent {
     margin-top: 1.5rem;
+  }
+  .characterImage {
+    height: 300px;
+  }
+  .characterImage img {
+    height: 300px;
   }
 }

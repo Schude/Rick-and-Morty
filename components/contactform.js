@@ -11,16 +11,16 @@ export default function Contactform() {
     message: "",
   });
 
-  const handleChange = (evt) => {
-    evt.preventDefault();
+  const handleChange = (event) => {
+    event.preventDefault();
     setData(() => ({
       ...data,
-      [evt.target.name]: evt.target.value,
+      [event.target.name]: event.target.value,
     }));
   };
 
-  const handleSubmit = (evt) => {
-    evt.preventDefault();
+  const handleSubmit = (event) => {
+    event.preventDefault();
     database
       .collection("contacts")
       .add({
@@ -29,7 +29,7 @@ export default function Contactform() {
         subject: data.subject,
         message: data.message,
       })
-      .then(function (docRef) {
+      .then(function () {
         alert("Submitted");
       })
       .catch(function (error) {
@@ -80,7 +80,7 @@ export default function Contactform() {
           name="message"
           value={data.message}
         ></textarea>
-        <input className={styles.submitBtn} type="submit"></input>
+        <button className={styles.submitBtn} type="submit">Contact</button>
       </form>
     </div>
   );
