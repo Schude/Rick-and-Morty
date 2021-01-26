@@ -38,28 +38,45 @@ export default function Characterdetail({ character }) {
               {` - ${character.species}`}
             </span>
           </div>
+
           <div className={styles.contentSection}>
             <span className={styles.textGray}>
-              Gender: <span className = {styles.contentText}>{character.gender}</span>
+              Gender:{" "}
+              <span className={styles.contentText}>{character.gender}</span>
             </span>
             <span className={styles.textGray}>
-              Type: <span  className = {styles.contentText}> {character.type === "" ? " Unknown":{}}</span>
+              Type:{" "}
+              <span className={styles.contentText}>
+                {" "}
+                {character.type === "" ? " Unknown" : character.type}
+              </span>
             </span>
           </div>
           <div className={styles.contentSection}>
-          <span className={styles.textGray}>
-              Last Location: <span  className = {styles.contentText}>{character.location.name}</span>
+            <span className={styles.textGray}>
+              Last Location:{" "}
+              <span className={styles.contentText}>
+                {character.location.name}
+              </span>
             </span>
             <span className={styles.textGray}>
-              Origin: <span className = {styles.contentText}> {character.origin.name}</span>
+              Origin:{" "}
+              <span className={styles.contentText}>
+                {" "}
+                {character.origin.name}
+              </span>
             </span>
           </div>
           <div className={styles.contentSection}>
-          <span className={styles.textGray}>
-              Total Episodes: <span className = {styles.contentText} >{character.episode.length}</span>
+            <span className={styles.textGray}>
+              Total Episodes:{" "}
+              <span className={styles.contentText}>
+                {character.episode.length}
+              </span>
             </span>
             <span className={styles.textGray}>
-              Created: <span className = {styles.contentText} > {character.created}</span>
+              Created:{" "}
+              <span className={styles.contentText}> {character.created}</span>
             </span>
           </div>
         </div>

@@ -15,20 +15,25 @@ const Char = ({ character }) => {
 
 export default Char;
 
-export async function getStaticPaths() {
-  const paths = [];
-  for (let i = 1; i < 21; i++) {
+export const getStaticPaths = async () => {
+  //Get Slug
+  let paths = [];
+
+  for (let i = 1; i < 672; i++) {
     const res = await unfetch(`https://rickandmortyapi.com/api/character/${i}`);
     const character = await res.json();
 
-    paths.push({ params: { slug: `${slug(character.name)}-${character.id}` } });
+    paths = [
+      ...paths,
+      { params: { slug: `${slug(character.name)}-${character.id}` } },
+    ];
   }
 
   return {
     paths,
     fallback: false,
   };
-}
+};
 
 export const getStaticProps = async ({ params }) => {
   const id = params.slug.split("-").slice(-1);
