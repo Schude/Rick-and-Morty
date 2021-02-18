@@ -17,7 +17,7 @@ export default Home;
 export const getStaticProps = async () => {
   //Duplicate Check et
   let charArr = [];
-  for (let i = 0; i < 5; i++) {
+  for (let i = 0; i < 4; i++) {
     const id = Math.floor(Math.random() * 671);
     const res = await unfetch(
       `https://rickandmortyapi.com/api/character/${id}`
@@ -29,13 +29,7 @@ export const getStaticProps = async () => {
     props: {
       characters: charArr,
     },
+    revalidate: 600,
   };
 };
-/**
- 
- * Footer ?
- * Contact Page
- * About Page
- * Homepage "Viel all Character ??"
- * Locationslar
- */
+

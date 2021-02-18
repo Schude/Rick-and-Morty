@@ -3,7 +3,7 @@ import Contactform from "../components/contactform";
 
 function Contact() {
   return (
-    <Layout>
+    <Layout title = "Contact">
 
       <Contactform />
       
