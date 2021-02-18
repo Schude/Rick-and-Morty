@@ -5,8 +5,9 @@ import Pagebutton from "./pagebutton";
 const Utility = ({ curr, value }) => {
   return (
     <div className={styles.utilityContainer}>
-      <Search />
       <Pagebutton current={curr} text="Prev" value={value} />
+      <Search />
+
       <Pagebutton current={curr} text="Next" value={value} />
     </div>
   );
