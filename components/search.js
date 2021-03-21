@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useRouter } from "next/router";
 import styles from "../styles/search.module.css";
-import {database} from './firebase'
+import { database } from "./firebase";
 const Search = () => {
   const [query, setQuery] = useState("");
   const router = useRouter();
@@ -11,12 +11,6 @@ const Search = () => {
   };
   const handleSubmit = (event) => {
     event.preventDefault();
-    database
-      .collection("searchtags")
-      .add({
-        searchTag: query
-      })
-     
 
     router.push(
       "/characters/search-results/[search]",
